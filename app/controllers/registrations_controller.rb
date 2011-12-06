@@ -12,7 +12,10 @@ class RegistrationsController < ApplicationController
       @registration = charge_token(token, @registration)
       @registration.save
 
-      redirect_to(registration_path(@registration.token))
+      case Rails.env
+      when "production" then redirect_to(registration_url(@registration.token, :host => "rubyweekend.heroku.com", :protocol => "http://"))
+      else redirect_to(registration_path(@registration.token))
+      end
     else
       render(:new)
     end
