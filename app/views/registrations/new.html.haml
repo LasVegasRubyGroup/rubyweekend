@@ -1,0 +1,38 @@
+.row
+  .threecol
+    %h1 Registration
+
+  .sevencol.last
+    - if @registration.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@registration.errors.count, "error")
+          prohibited this record from being saved:
+        %p There were problems with the following fields:
+        %ul
+          - @registration.errors.full_messages.each do |msg|
+            %li= msg
+
+    = form_for(@registration, html: { id: "payment-form" }) do |f|
+      .section-wrapper
+        %ol
+          %li= label_tag("Name")
+          %li= f.text_field(:name)
+
+          %li= label_tag("Email")
+          %li= f.text_field(:email)
+
+          %li= label_tag("Credit Card Number")
+          %li= f.text_field(:card_number, size: 25)
+
+          %li= label_tag("Verification Number")
+          %li= f.text_field(:card_cvc, size: 3)
+
+          %li= label_tag("Expiration (MM/YYYY)")
+          %li
+            = f.text_field(:card_expiry_month, size: 2)
+            = f.text_field(:card_expiry_year, size: 3)
+
+      .section-wrapper.controls
+        %ol
+          %li= submit_tag("Submit Registration")

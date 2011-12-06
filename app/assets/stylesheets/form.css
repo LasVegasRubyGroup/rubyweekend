@@ -1,0 +1,96 @@
+form .section-wrapper.controls {
+  border-bottom: none;
+  margin-top: 2em;
+}
+
+form .section-wrapper ol {
+  list-style-type: none;
+  margin: 0;
+}
+
+form .section-wrapper ol li {
+  margin-bottom: 15px;
+  margin-left: 0;
+}
+
+form .section-wrapper ol li .field_with_errors label {
+  color: red;
+}
+
+form .section-wrapper ol li label {
+  color: rgba(255, 255, 255, 1);
+  display: block;
+  font-weight: bold;
+  margin-bottom: -0.5em;
+}
+
+form .section-wrapper ol li label span {
+  color: #bcbcbc;
+  font-weight: normal;
+  margin-left: 1em;
+}
+
+form .section-wrapper ol li input[type="text"], form .section-wrapper ol li input[type="password"], form .section-wrapper ol li textarea {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.09), 0 1px 1px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.09), 0 1px 1px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.09), 0 1px 1px rgba(255, 255, 255, 0.3);
+  border-top-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border: 1px solid #cccccc;
+  color: rgba(100, 100, 100, 1);
+  font-size: 1em;
+  padding: 10px;
+}
+
+form .section-wrapper ol li input[type="text"]:hover, form .section-wrapper ol li input[type="password"]:hover, form .section-wrapper ol li textarea:hover {
+  -moz-transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  box-shadow: 0 0 10px rgba(255, 255, 100, 0.75);
+  -webkit-box-shadow: 0 0 10px rgba(255, 255, 100, 0.75);
+  -moz-box-shadow: 0 0 10px rgba(255, 255, 100, 0.75);
+  filter: progid:DXImageTransform.Microsoft.DropShadow(Color='$color');
+}
+
+form .section-wrapper ol li input[type="submit"] {
+  border-top-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  filter: progid:DXImageTransform.Microsoft.DropShadow(Color='$color');
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#efefef));
+  border: 1px solid #e7e7e7;
+  color: #177799;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.6em 0.85em;
+  text-decoration: none;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+}
+
+form .section-wrapper ol li input[type="submit"]:hover, form .section-wrapper ol li input[type="submit"].current {
+  background: -webkit-gradient(linear, left top, left bottom, from(#177799), to(#0e5b76));
+  border: 1px solid #177799;
+  color: white;
+}

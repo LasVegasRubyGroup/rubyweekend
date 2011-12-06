@@ -1,0 +1,19 @@
+.row
+  .twocol
+    %h1 Register
+
+  .eightcol.last
+    %p= link_to("Register Now", new_registration_path)
+
+.row
+  .twocol
+    %h1 Venue
+
+  #venue.eightcol.last
+    %p
+      = link_to(image_tag("venue/1_thumb.jpg"), "/assets/venue/1.jpg", :rel => "facebox")
+      = link_to(image_tag("venue/2_thumb.jpg"), "/assets/venue/2.jpg", :rel => "facebox")
+      = link_to(image_tag("venue/3_thumb.jpg"), "/assets/venue/3.jpg", :rel => "facebox")
+      = link_to(image_tag("venue/4_thumb.jpg"), "/assets/venue/4.jpg", :rel => "facebox")
+    %p.small Photos Copyright 2010 Mike R. Manzano
+    %p /usr/lib is a community technology library, coworking hangout and meetup venue located in downtown Las Vegas on the second floor of the Emergency Arts building.
