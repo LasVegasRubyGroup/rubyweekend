@@ -18,6 +18,10 @@ body {
   font: 18px/1.5 Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
 }
 
+h1 {
+  text-shadow: 0 1px px rgba(0, 0, 0, 0.5);
+}
+
 a {
   color: rgba(255, 255, 255, 1);
   font-weight: bold;
@@ -32,11 +36,11 @@ p.small {
 }
 
 .row {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 #header {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 #footer {
@@ -48,7 +52,7 @@ p.small {
   text-align: right;
 }
 
-#venue img {
+#venue img.photo {
   border: 5px solid rgba(255, 255, 255, 1);
   box-shadow: 0 0 10px rgba(0, 0, 0, .15);
   margin-right: .5em;

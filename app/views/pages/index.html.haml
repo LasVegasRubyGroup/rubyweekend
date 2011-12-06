@@ -11,9 +11,20 @@
 
   #venue.eightcol.last
     %p
-      = link_to(image_tag("/assets/venue/1_thumb.jpg"), "/assets/venue/1.jpg", :rel => "facebox")
-      = link_to(image_tag("/assets/venue/2_thumb.jpg"), "/assets/venue/2.jpg", :rel => "facebox")
-      = link_to(image_tag("/assets/venue/3_thumb.jpg"), "/assets/venue/3.jpg", :rel => "facebox")
-      = link_to(image_tag("/assets/venue/4_thumb.jpg"), "/assets/venue/4.jpg", :rel => "facebox")
+      = link_to(image_tag("/assets/venue/1_thumb.jpg", class: "photo"), "/assets/venue/1.jpg", rel: "facebox")
+      = link_to(image_tag("/assets/venue/2_thumb.jpg", class: "photo"), "/assets/venue/2.jpg", rel: "facebox")
+      = link_to(image_tag("/assets/venue/3_thumb.jpg", class: "photo"), "/assets/venue/3.jpg", rel: "facebox")
+      = link_to(image_tag("/assets/venue/4_thumb.jpg", class: "photo"), "/assets/venue/4.jpg", rel: "facebox")
     %p.small Photos Copyright 2010 Mike R. Manzano
-    %p /usr/lib is a community technology library, coworking hangout and meetup venue located in downtown Las Vegas on the second floor of the Emergency Arts building.
+    %p
+      = image_tag("/assets/usrliblogo.png", align: "right")
+      \/usr/lib is a community technology library, coworking hangout and meetup venue located in downtown Las Vegas on the second floor of the Emergency Arts building.
+
+    %br
+
+    %p
+      520 E. Fremont St., Second Floor<br>
+      Las Vegas, NV 89101<br>
+      (702) 518-0098<br>
+      %br
+      %a{ href: "http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=520+E.+Fremont+St.+las+vegas&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=49.891082,93.076172&amp;vpsrc=0&amp;ie=UTF8&amp;hq=&amp;hnear=520+Fremont+St,+Las+Vegas,+Clark,+Nevada+89101&amp;t=m&amp;z=14&amp;ll=36.168962,-115.139697" } View Venue on Google Maps
