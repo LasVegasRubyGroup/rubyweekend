@@ -21,7 +21,7 @@ class RegistrationsController < ApplicationController
       render(:new)
     end
 
-  rescue Stripe::CardError => e
+  rescue Stripe::InvalidRequestError, Stripe::CardError => e
     @registration.errors.add(:base, e.message)
     render(:new)
   end
