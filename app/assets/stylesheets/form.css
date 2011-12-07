@@ -1,3 +1,11 @@
+#error_explanation {
+  margin-bottom: 2em;
+}
+
+#error_explanation ul {
+  margin-left: 2em;
+}
+
 form .section-wrapper.controls {
   border-bottom: none;
   margin-top: 2em;
@@ -85,7 +93,6 @@ form .section-wrapper ol li input[type="submit"] {
   font-weight: bold;
   padding: 0.6em 0.85em;
   text-decoration: none;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   font-size: 1em;
 }
 
@@ -93,4 +100,8 @@ form .section-wrapper ol li input[type="submit"]:hover, form .section-wrapper ol
   background: -webkit-gradient(linear, left top, left bottom, from(#177799), to(#0e5b76));
   border: 1px solid #177799;
   color: white;
+}
+
+form .section-wrapper ol li select {
+  margin-top: 2em;
 }
