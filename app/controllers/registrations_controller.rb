@@ -11,6 +11,7 @@ class RegistrationsController < ApplicationController
     if @registration.save
       @registration = charge_token(token, @registration)
       @registration.save
+      RegistrationMailer.confirmation_email(@registration).deliver
 
       case Rails.env
       when "production" then redirect_to(registration_url(@registration.token, :host => "rubyweekend.heroku.com", :protocol => "http://"))
