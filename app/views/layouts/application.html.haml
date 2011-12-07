@@ -23,7 +23,9 @@
         .row
           .twocol
           .eightcol.last
-            %p== &copy; 2011 Las Vegas Ruby Group #{link_to("meetup.com/las-vegas-ruby-on-rails", "http://www.meetup.com/las-vegas-ruby-on-rails")}
+            %p
+              == &copy; 2011 Las Vegas Ruby Group #{link_to("meetup.com/las-vegas-ruby-on-rails", "http://www.meetup.com/las-vegas-ruby-on-rails")}
+              = link_to("@rubyweekend", "http://twitter.com/rubyweekend")
 
     :javascript
       var _gaq = _gaq || [];
