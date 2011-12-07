@@ -1,0 +1,71 @@
+// = require 1140
+// = require facebox
+// = require form
+// = require_self
+
+$blue: rgba(39, 170, 225, 1)
+$white: rgba(255, 255, 255, 1)
+
+body
+  background: $blue
+  background-image: url(/assets/background.png)
+  background-position: center -200px
+  background-repeat: no-repeat
+  background-size: 100% auto
+  color: $white
+  font: 18px/1.5 Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif
+
+h1, h2
+  text-shadow: 0 1px px rgba(0, 0, 0, 0.5)
+
+a
+  color: $white
+  font-weight: bold
+
+p
+  padding-top: .75em
+
+  &.small
+    font-size: .6em
+
+table
+  border-collapse: collapse
+  cell-spacing: 0
+
+  th, td
+    vertical-align: top
+
+  th
+    background: rgba(255, 255, 255, .4)
+    padding: .5em
+    text-align: right
+    width: 8em
+
+  td
+    padding: .5em
+
+    &.title
+      background: rgba(255, 255, 255, .25)
+      font-weight: bold
+
+  p
+    padding-top: 0
+    margin-top: 0
+
+.row
+  margin-bottom: 2em
+
+#header
+  margin-top: 1em
+
+#footer
+  margin: 6em 0 5em
+
+#date
+  padding-top: 2.5em
+  text-align: right
+
+#venue img.photo
+  border: 5px solid $white
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15)
+  margin-right: .5em
