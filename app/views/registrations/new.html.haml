@@ -41,7 +41,7 @@
         %ol
           %li
             = label_tag(:usrlib_membership, "Are you a member of /usr/lib?")
-            = f.select(:usrlib_membership, options_for_select([ [ "Yes, I am a member.", true ], [ "No, I am not a member.", false ] ]), include_blank: true)
+            = f.select(:usrlib_membership, options_for_select([ [ "Yes, I am a member.", true ], [ "No, I am not a member.", false ] ], @registration.usrlib_membership), include_blank: true)
 
       .section-wrapper.controls
         %ol
