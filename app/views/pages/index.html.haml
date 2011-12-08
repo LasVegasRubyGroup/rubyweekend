@@ -107,7 +107,7 @@
 
     %table.schedule
       %tr
-        %th.day{ colspan: 2 } Day One
+        %th.day{ colspan: 2 } Day Two
 
       %tr
         %th 8:00 - 9:00
@@ -158,15 +158,33 @@
           %p The crew wll be available to answer any questions you may have that were not answered during the class.
 
 .row
-  .twocol
-  .eightcol.last
-    %h2 Brought to you by the Las Vegas Ruby Group
-    = link_to(image_tag("/assets/lvrubylogo.png", class: "logo"), "http://www.meetup.com/las-vegas-ruby-on-rails")
-    %p The place to learn and share information about Ruby, the  Rails framework and related technologies in Las Vegas. We cover several different languages and tend to focus on web applications and ruby.
+  .tencol.last
     #rubygroup
-      %p
-        = image_tag("/assets/rubygroup/bob.jpg", class: "photo")
-        = image_tag("/assets/rubygroup/jason.jpg", class: "photo")
-        = image_tag("/assets/rubygroup/jeremy.jpg", class: "photo")
-        = image_tag("/assets/rubygroup/judd.jpg", class: "photo")
-        = image_tag("/assets/rubygroup/russ.jpg", class: "photo")
+      %h2 Brought to you by the Las Vegas Ruby Group
+      = link_to(image_tag("/assets/lvrubylogo.png", class: "logo"), "http://www.meetup.com/las-vegas-ruby-on-rails")
+      %p The place to learn and share information about Ruby, the  Rails framework and related technologies in Las Vegas. We cover several different languages and tend to focus on web applications and ruby.
+
+      %h3 Bob Firestone
+      = image_tag("/assets/rubygroup/bob.jpg", class: "photo")
+      %p #{link_to("@bobfirestone", "http://twitter.com/bobfirestone")}
+      %p Bob joined the Ruby Group knowing nothing about Ruby. Now he's building web applications, presenting to the group and teaching others what he's learned. He's not afraid to express his mind and serves as the CCO of #{link_to("MainStreetChamber", "http://mainstreetchamber.org/")}. Bob loves cars and can talk it up with everyone from grease monkeys to code monkeys.
+
+      %h3 Judd Lillestrand
+      = image_tag("/assets/rubygroup/judd.jpg", class: "photo")
+      %p #{link_to("@JuddLillestrand", "http://twitter.com/JuddLillestrand")} | #{link_to("vegastech.com/people/judd-lillestrand", "http://vegastech.com/people/judd-lillestrand/")}
+      %p After learning to code in his spare time, Judd's wanted a community in Las Vegas to ask Ruby related questions. So he started the Las Vegas Ruby Group. While he's not the most skilled member of the group, he's been from zero development skills to to launching #{link_to("ScripSmart.com", "http://scripsmart.com")}. With the help of others, Judd has helped foster the Las Vegas Ruby Group into one of the most successful user groups in the Las Vegas Tech Community.
+
+      %h3 Jason Arhart
+      = image_tag("/assets/rubygroup/jason.jpg", class: "photo")
+      %p #{link_to("@jarhart", "http://twitter.com/jarhart")} | #{link_to("vegastech.com/people/jason-arhart", "http://vegastech.com/people/jason-arhart/")}
+      %p Jason loves programing; he learns new languages for fun (seriously). At last count, he was familiar with 15 languages and love Ruby for it's simplicity. You'll know jason is on a roll when he's rubbing his hands together in front of this computer. Jason's been programming professionally for 19 years and working with Ruby for 10 years. In October of 2011 Jason joined the team at #{link_to("Originate", "http://www.originate.com/")}, Inc. to be their first engineer in Las Vegas.
+
+      %h3 Jeremy Woertink
+      = image_tag("/assets/rubygroup/jeremy.jpg", class: "photo")
+      %p #{link_to("@jeremywoertink", "http://twitter.com/jeremywoertink")} | #{link_to("vegastech.com/people/jeremy-woertink", "http://vegastech.com/people/jeremy-woertink/")}
+      %p One of the most vocal and friendly members of the group, Jeremy is know for digging into cutting edge technology and pushing the limits. He's been building a 3D video game in Ruby using JRuby and loves sharing what he learns with others. Jeremy also has a great sense of humor which often seeps into his presentations for the group. If you recognize Jeremy it's because you've seen him interviewing people on his show #{link_to("loveadvice.tv", "http://loveadvice.tv")}.
+
+      %h3 Russ Smith
+      = image_tag("/assets/rubygroup/russ.jpg", class: "photo")
+      %p #{link_to("@cloudsplitter", "http://twitter.com/cloudsplitter")} | #{link_to("vegastech.com/people/russ-smith", "http://vegastech.com/people/russ-smith/")}
+      %p Russ knows Rails inside-out, including most of the common plugins. He loves to dive into new technology in order to get the job done right. Russ is responsible for throwing the Ruby Weekend site together and has been writing code professionally for 10 years. Russ also has strong design background and crushes records in the 1983 arcade classic #{link_to("Track and Field", "http://en.wikipedia.org/wiki/1983_in_athletics_(track_and_field)")}.
