@@ -8,4 +8,8 @@ class Registration < ActiveRecord::Base
 
   attr_accessible :name, :email, :usrlib_membership
   attr_accessible :card_number, :card_cvc, :card_expiry_month, :card_expiry_year
+
+  def self.full?
+    self.count >= 25
+  end
 end

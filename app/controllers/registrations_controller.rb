@@ -1,6 +1,6 @@
 class RegistrationsController < ApplicationController
   def new
-    render("full") and return if Registration.count >= 25
+    render("full") and return if Registration.full?
     @registration = Registration.new
   end
 

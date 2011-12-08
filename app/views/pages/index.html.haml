@@ -12,15 +12,17 @@
     %h1 Then Ruby Weekend Is For You!
     %p Ruby Weekend is an intensive two day workshop where we'll take 20 people who have no or very little software development experience and walk them through building a web application. At the end of the weekend you'll have the tools to take the next step towards building your idea.
 
-    = link_to(@registration_url, class: "register") do
-      %h1 Register Today
-      %p Space is very limited.
+    - unless Registration.full?
+      = link_to(@registration_url, class: "register") do
+        %h1 Register Today
+        %p Space is very limited.
 
     %h2 How much is it?
     %p One weekend of your time and <strong>$50</strong>. It also includes a membership to /usr/lib, if you don't already have one. ($25 value)
 
     %h2 Prerequisites
     %p While you don't need programming experience, you should have some basic computer knowledge and a modern laptop (i.e. 2GB RAM, 4GB hard drive space available and WIFI capability).
+    %p If you have any questions about this information, please email #{mail_to("judd@rubyweekend.com", "judd@rubyweekend.com")}.
 
     %h2 Brought to you by the Las Vegas Ruby Group
     = link_to(image_tag("/assets/lvrubylogo.png", class: "logo"), "http://www.meetup.com/las-vegas-ruby-on-rails")
