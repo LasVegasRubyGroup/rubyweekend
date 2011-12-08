@@ -23,10 +23,11 @@ a
   font-weight: bold
 
 p
-  padding-top: .75em
+  margin-bottom: 1em
 
   &.small
     font-size: .6em
+    margin-bottom: 1em
 
 table.schedule
   border-collapse: collapse
@@ -37,10 +38,13 @@ table.schedule
     vertical-align: top
 
   th
-    background: rgba(255, 255, 255, .4)
+    background: rgba(6, 85, 118, .2)
     padding: .5em
     text-align: right
     width: 8em
+
+    &.day
+      background: rgba(6, 85, 118, .4)
 
   td
     padding: .5em
@@ -55,6 +59,7 @@ table.schedule
   p
     padding-top: 0
     margin-top: 0
+    margin-bottom: 1em
 
 .row
   margin-bottom: 2em
@@ -66,10 +71,14 @@ table.schedule
   margin: 6em 0 5em
 
 #date
-  padding-top: 2.5em
+  padding-top: 2.75em
   text-align: right
+
+.date
+  font-size: 2.5em
 
 #venue img.photo
   border: 5px solid $white
   box-shadow: 0 0 10px rgba(0, 0, 0, .15)
   margin-right: .5em
+  width: 163px
