@@ -12,6 +12,10 @@
     %h1 Then Ruby Weekend Is For You!
     %p Ruby Weekend is an intensive two day workshop where we'll take 20 people who have no or very little software development experience and walk them through building a web application. At the end of the weekend you'll have the tools to take the next step towards building your idea.
 
+    = link_to(@registration_url, class: "register") do
+      %h1 Register Today
+      %p Space is very limited.
+
     %h2 How much is it?
     %p One weekend of your time and <strong>$50</strong>. It also includes a membership to /usr/lib, if you don't already have one. ($25 value)
 
@@ -21,8 +25,6 @@
     %h2 Brought to you by the Las Vegas Ruby Group
     = link_to(image_tag("/assets/lvrubylogo.png", class: "logo"), "http://www.meetup.com/las-vegas-ruby-on-rails")
     %p The place to learn and share information about Ruby, the  Rails framework and related technologies in Las Vegas. We cover several different languages and tend to focus on web applications and ruby.
-
-    / %h2= link_to("Register Now", @registration_url)
 
 .row
   .twocol
