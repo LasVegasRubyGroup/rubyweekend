@@ -20,7 +20,7 @@
       %h1 The Workshop is Full
 
     %h2 How much is it?
-    %p One weekend of your time and <strong>$50</strong>. It also includes a membership to /usr/lib, if you don't already have one. ($25 value)
+    %p One weekend of your time and <strong>$50</strong>. It also includes a membership to #{link_to("\/usr/lib", "http://usrlib.org", :target => 'new')}, if you don't already have one. ($25 value)
 
     %h2 Prerequisites
     %p While you don't need programming experience, you should have some basic computer knowledge and a modern laptop (i.e. 2GB RAM, 4GB hard drive space available and WIFI capability).
@@ -28,6 +28,8 @@
     %p Ruby Weekend is a volunteer effort of the Las Vegas Ruby Group. We want to give back to the local community and believe introducing others to programing over the course of the weekend is a great way to start.
     %p The purpose of this event is to give those with an interest in startups and an inclination to learn computer programing an introduction to Ruby. While it's open to anyone who can make it to Las Vegas, we're really doing this to help #VegasTech: the $50 cost serves to ensure those who sign up are committed and will actually show up; after all, there are just 20 spots and this is a great opportunity for the right people.
     %p At the end of the weekend, we aim to give attendees the tools to continue the process of learning to becoming a web developer and ultimately build their ideas into a reality.
+    
+    %p Assuming this first event goes well, there will likely be more Ruby Weekends.
     
     %p If you have any questions about Ruby Weekend, just email #{mail_to("judd@rubyweekend.com", "judd@rubyweekend.com")}.
     
@@ -51,8 +53,9 @@
       = link_to(image_tag("/assets/venue/4_thumb.jpg", class: "photo"), "/assets/venue/4.jpg", rel: "facebox")
     %p.small Photos courtesy of Mike R. Manzano
     %p
-      = image_tag("/assets/usrliblogo.png", align: "right")
-      #{link_to("\/usr/lib", "http://usrlib.org")} is a community technology library, coworking hangout and meetup venue located in downtown Las Vegas on the second floor of the Emergency Arts building.
+  
+      = link_to(image_tag("/assets/usrlib_logo.png", align: "right"), "http://usrlib.org", :target => 'new')
+      #{link_to("\/usr/lib", "http://usrlib.org", :target => 'new')} is a community technology library, coworking hangout and meetup venue located in downtown Las Vegas on the second floor of the Emergency Arts building.
 
     %br
 
