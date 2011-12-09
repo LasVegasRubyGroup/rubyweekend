@@ -3,6 +3,8 @@ class RegistrationMailer < ActionMailer::Base
 
   def confirmation_email(registration)
     @registration = registration
-    mail(to: registration.email, subject: "Ruby Weekend Registration Confirmation")
+    mail(to: registration.email,
+         bcc: "judd@rubyweekend.com",
+         subject: "Ruby Weekend Registration Confirmation")
   end
 end
