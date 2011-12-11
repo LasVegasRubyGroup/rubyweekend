@@ -20,11 +20,19 @@
       %h1 The Workshop is Full
 
     %h2 How much is it?
-    %p One weekend of your time and <strong>$50</strong>. It also includes a membership to /usr/lib, if you don't already have one. ($25 value)
+    %p One weekend of your time and <strong>$50</strong>. It also includes a membership to #{link_to("\/usr/lib", "http://usrlib.org", :target => 'new')}, if you don't already have one. ($25 value)
 
     %h2 Prerequisites
     %p While you don't need programming experience, you should have some basic computer knowledge and a modern laptop (i.e. 2GB RAM, 4GB hard drive space available and WIFI capability).
-    %p If you have any questions about this information, please email #{mail_to("judd@rubyweekend.com", "judd@rubyweekend.com")}.
+    %h2 Just $50, a weekend and I can become a web developer?
+    %p Ruby Weekend is a volunteer effort of the Las Vegas Ruby Group. We want to give back to the local community and believe introducing others to programing over the course of the weekend is a great way to start.
+    %p The purpose of this event is to give those with an interest in startups and an inclination to learn computer programing an introduction to Ruby. While it's open to anyone who can make it to Las Vegas, we're really doing this to help #VegasTech: the $50 cost serves to ensure those who sign up are committed and will actually show up; after all, there are just 20 spots and this is a great opportunity for the right people.
+    %p At the end of the weekend, we aim to give attendees the tools to continue the process of learning to becoming a web developer and ultimately build their ideas into a reality.
+    
+    %p Assuming this first event goes well, there will likely be more Ruby Weekends.
+    
+    %p If you have any questions about Ruby Weekend, just email #{mail_to("judd@rubyweekend.com", "judd@rubyweekend.com")}.
+    
 
 .row
   .twocol
@@ -45,8 +53,9 @@
       = link_to(image_tag("/assets/venue/4_thumb.jpg", class: "photo"), "/assets/venue/4.jpg", rel: "facebox")
     %p.small Photos courtesy of Mike R. Manzano
     %p
-      = image_tag("/assets/usrliblogo.png", align: "right")
-      \/usr/lib is a community technology library, coworking hangout and meetup venue located in downtown Las Vegas on the second floor of the Emergency Arts building.
+  
+      = link_to(image_tag("/assets/usrlib_logo.png", align: "right"), "http://usrlib.org", :target => 'new')
+      #{link_to("\/usr/lib", "http://usrlib.org", :target => 'new')} is a community technology library, coworking hangout and meetup venue located in downtown Las Vegas on the second floor of the Emergency Arts building.
 
     %br
 
@@ -169,17 +178,17 @@
       %h3 Bob Firestone
       = image_tag("/assets/rubygroup/bob.jpg", class: "photo")
       %p #{link_to("@bobfirestone", "http://twitter.com/bobfirestone")}
-      %p Bob joined the Ruby Group knowing nothing about Ruby. Now he's building web applications, presenting to the group and teaching others what he's learned. He's not afraid to express his mind and serves as the CCO of #{link_to("MainStreetChamber", "http://mainstreetchamber.org/")}. Bob loves cars and can talk it up with everyone from grease monkeys to code monkeys.
+      %p Bob joined the Las Vegas Ruby Group knowing nothing about Ruby. Now he's building web applications, presenting to the group and teaching others what he's learned. He's not afraid to express his mind and serves as the CCO of #{link_to("MainStreetChamber", "http://mainstreetchamber.org/")}. Bob loves cars and can talk it up with everyone from grease monkeys to code monkeys.
 
       %h3 Judd Lillestrand
       = image_tag("/assets/rubygroup/judd.jpg", class: "photo")
       %p #{link_to("@JuddLillestrand", "http://twitter.com/JuddLillestrand")} | #{link_to("vegastech.com/people/judd-lillestrand", "http://vegastech.com/people/judd-lillestrand/")}
-      %p After learning to code in his spare time, Judd's wanted a community in Las Vegas to ask Ruby related questions. So he started the Las Vegas Ruby Group. While he's not the most skilled member of the group, he's been from zero development skills to to launching #{link_to("ScripSmart.com", "http://scripsmart.com")}. With the help of others, Judd has help foster the Las Vegas Ruby Group into one of the most successful user groups in the Las Vegas Tech Community.
+      %p After learning to code in his spare time, Judd wanted a community in Las Vegas to ask Ruby related questions. So he started the Las Vegas Ruby Group. While he's not the most skilled member of the group, he's been from zero development skills to to launching #{link_to("ScripSmart.com", "http://scripsmart.com")}. With the help of others, Judd has fostered the Las Vegas Ruby Group into one of the most successful user groups in the Las Vegas Tech Community.
 
       %h3 Jason Arhart
       = image_tag("/assets/rubygroup/jason.jpg", class: "photo")
       %p #{link_to("@jarhart", "http://twitter.com/jarhart")} | #{link_to("vegastech.com/people/jason-arhart", "http://vegastech.com/people/jason-arhart/")}
-      %p Jason loves programing; he learns new languages for fun (seriously). At last count, he was familiar with 15 languages and love Ruby for it's simplicity. You'll know jason is on a roll when he's rubbing his hands together in front of this computer. Jason's been programming professionally for 19 years and working with Ruby for 10 years. In October of 2011 Jason joined the team at #{link_to("Originate", "http://www.originate.com/")}, Inc. to be their first engineer in Las Vegas.
+      %p Jason loves programing; he learns new languages for fun (seriously). At last count, he was familiar with 15 languages and loves Ruby for it's simplicity. You'll know jason is on a roll when he's rubbing his hands together in front of this computer. Jason's been programming professionally for 19 years and working with Ruby for 10 years. In October of 2011 Jason joined the team at #{link_to("Originate", "http://www.originate.com/")}, Inc. to be their first engineer in Las Vegas.
 
       %h3 Jeremy Woertink
       = image_tag("/assets/rubygroup/jeremy.jpg", class: "photo")

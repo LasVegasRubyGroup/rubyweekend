@@ -5,7 +5,7 @@ class Registration < ActiveRecord::Base
 
   attr_accessor :card_number, :card_cvc
   attr_accessor :card_expiry_month, :card_expiry_year
-
+  validates_format_of :email, :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i, :on => :create, :message => "is invalid"  
   attr_accessible :name, :email, :usrlib_membership
   attr_accessible :card_number, :card_cvc, :card_expiry_month, :card_expiry_year
 
