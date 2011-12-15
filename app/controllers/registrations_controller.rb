@@ -45,14 +45,14 @@ private
   end
 
   def charge_token(token, registration)
-    Stripe::Charge.create(
+    charge = Stripe::Charge.create(
       amount: token.amount,
       currency: token.currency,
       card: token.id,
       description: "Registration charge for Ruby Weekend.")
 
     registration.amount = token.amount
-    registration.token = token.id
+    registration.token = charge.id
     registration.card_last_four = token.card.last4
     registration.card_type = token.card.type
 
