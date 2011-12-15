@@ -15,7 +15,7 @@
     - unless Registration.full?
       = link_to(@registration_url, class: "register") do
         %h1 Register Today
-        %p Space is very limited.
+        %p="Just #{20 - Registration.all.size} seats remain!"
     - else
       %h1 The Workshop is Full
 
