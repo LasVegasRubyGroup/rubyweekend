@@ -15,9 +15,11 @@
     - unless Registration.full?
       = link_to(@registration_url, class: "register") do
         %h1 Register Today
-        %p="Just #{20 - Registration.all.size} seats remain!"
+        %p="Only #{20 - Registration.all.size} seats remain!"
     - else
-      %h1 The Workshop is Full
+    = link_to('https://twitter.com/#!/rubyweekend',  class: "register") do
+      %h1 This Workshop is Full
+      %p="Follow @RubyWeekend on Twitter to be the first to know if a <br /> spot becomes available or we host another Ruby Weekend.".html_safe
 
     %h2 How much is it?
     %p One weekend of your time and <strong>$50</strong>. It also includes a membership to #{link_to("\/usr/lib", "http://usrlib.org", :target => 'new')}, if you don't already have one. ($25 value)
@@ -188,7 +190,7 @@
       %h3 Jason Arhart
       = image_tag("/assets/rubygroup/jason.jpg", class: "photo")
       %p #{link_to("@jarhart", "http://twitter.com/jarhart")} | #{link_to("vegastech.com/people/jason-arhart", "http://vegastech.com/people/jason-arhart/")}
-      %p Jason loves programing; he learns new languages for fun (seriously). At last count, he was familiar with 15 languages and loves Ruby for it's simplicity. You'll know jason is on a roll when he's rubbing his hands together in front of this computer. Jason's been programming professionally for 19 years and working with Ruby for 10 years. In October of 2011 Jason joined the team at #{link_to("Originate", "http://www.originate.com/")}, Inc. to be their first engineer in Las Vegas.
+      %p Jason loves programing; he learns new languages for fun (seriously). At last count, he was familiar with 15 languages and loves Ruby for it's simplicity. You'll know Jason is on a roll when he's rubbing his hands together in front of this computer. Jason's been programming professionally for 19 years and working with Ruby for 10 years. In October of 2011 Jason joined the team at #{link_to("Originate", "http://www.originate.com/")}, Inc. to be their first engineer in Las Vegas.
 
       %h3 Jeremy Woertink
       = image_tag("/assets/rubygroup/jeremy.jpg", class: "photo")
