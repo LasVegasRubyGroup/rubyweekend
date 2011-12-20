@@ -1,0 +1,27 @@
+.row
+  .threecol
+    %h1 Waitlist
+
+  .sevencol.last
+    - if @waitlist.errors.any?
+      #error_explanation
+        %h2 There was a problem adding you to the waitlist:
+        %ul
+          - @waitlist.errors.full_messages.each do |msg|
+            %li= msg
+
+    = form_for(@waitlist, html: { id: "payment-form" }) do |f|
+      .section-wrapper
+        %ol
+          %li= label_tag("Name")
+          %li= f.text_field(:name)
+
+          %li= label_tag("Email")
+          %li= f.text_field(:email)
+
+          %li= label_tag("Phone")
+          %li= f.text_field(:phone)
+
+      .section-wrapper.controls
+        %ol
+          %li= submit_tag("Waitlist Me")

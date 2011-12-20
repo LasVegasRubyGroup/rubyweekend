@@ -17,9 +17,11 @@
         %h1 Register Today
         %p="Only #{20 - Registration.all.size} seats remain!"
     - else
-    = link_to('https://twitter.com/#!/rubyweekend',  class: "register") do
-      %h1 This Workshop is Full
-      %p="Follow @RubyWeekend on Twitter to be the first to know if a <br /> spot becomes available or we host another Ruby Weekend.".html_safe
+      = link_to(new_waitlist_path,  class: "register") do
+        %h1 This Workshop is Full
+        %p Signup for the wait list if any seats become available.
+        %p OR
+        %p Follow @RubyWeekend on Twitter be updated about future events. 
 
     %h2 How much is it?
     %p One weekend of your time and <strong>$50</strong>. It also includes a membership to #{link_to("\/usr/lib", "http://usrlib.org", :target => 'new')}, if you don't already have one. ($25 value)
