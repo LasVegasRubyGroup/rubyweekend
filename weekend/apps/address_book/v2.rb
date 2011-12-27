@@ -1,5 +1,4 @@
 require "rubygems"
-require "highline/import"
 
 @address_book = []
 
@@ -20,7 +19,10 @@ def list
   end
 end
 
-choose do |menu|
-  menu.prompt = "What would you like to do? "
-  menu.choice(:list) { list }
-end
+puts "What would you like to do? "
+puts "1. List Addresses"
+print "Type number selection from above: "
+
+choice = gets.chomp
+
+list

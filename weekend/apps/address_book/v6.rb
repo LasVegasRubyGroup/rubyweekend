@@ -1,6 +1,5 @@
 require "rubygems"
 require "json"
-require "highline/import"
 
 @address_book = if File.exists?("addresses.json")
   JSON.parse(File.read("addresses.json"))
@@ -48,9 +47,14 @@ def search
   end
 end
 
-choose do |menu|
-  menu.prompt = "What would you like to do? "
-  menu.choice(:list) { list }
-  menu.choice(:add) { add }
-  menu.choice(:search) { search }
+puts "What would you like to do? "
+puts "1. List Addresses"
+puts "2. Add Address"
+puts "3. Search Addresses"
+print "Type number selection from above: "
+
+case gets.chomp
+when "1" then list
+when "2" then add
+when "3" then search
 end

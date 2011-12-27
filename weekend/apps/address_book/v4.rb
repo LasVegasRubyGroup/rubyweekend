@@ -1,6 +1,5 @@
 require "rubygems"
 require "json"
-require "highline/import"
 
 @address_book = if File.exists?("addresses.json")
   JSON.parse(File.read("addresses.json"))
@@ -33,8 +32,15 @@ def add
   File.write("addresses.json", @address_book.to_json)
 end
 
-choose do |menu|
-  menu.prompt = "What would you like to do? "
-  menu.choice(:list) { list }
-  menu.choice(:add) { add }
+puts "What would you like to do? "
+puts "1. List Addresses"
+puts "2. Add Address"
+print "Type number selection from above: "
+
+choice = gets.chomp
+
+if choice == "1"
+  list
+else
+  add
 end

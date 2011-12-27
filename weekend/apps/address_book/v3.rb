@@ -1,5 +1,4 @@
 require "rubygems"
-require "highline/import"
 
 @address_book = []
 
@@ -39,4 +38,17 @@ choose do |menu|
   menu.prompt = "What would you like to do? "
   menu.choice(:list) { list }
   menu.choice(:add) { add }
+end
+
+puts "What would you like to do? "
+puts "1. List Addresses"
+puts "2. Add Address"
+print "Type number selection from above: "
+
+choice = gets.chomp
+
+if choice == "1"
+  list
+else
+  add
 end
