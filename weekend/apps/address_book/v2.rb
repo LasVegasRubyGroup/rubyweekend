@@ -14,9 +14,9 @@ russ = {
 
 def list
   @address_book.each do |address|
-    puts "#{address["first_name"]} #{address["last_name"]}"
-    puts "#{address["phone"]}"
-    puts "#{address["email"]}"
+    puts address["first_name"] + " " + address["last_name"]
+    puts address["phone"]
+    puts address["email"]
   end
 end
 

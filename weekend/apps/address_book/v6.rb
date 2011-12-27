@@ -9,9 +9,9 @@ else
 end
 
 def print_address(address)
-  puts "Name:\t\t#{address["first_name"]} #{address["last_name"]}"
-  puts "Phone Number:\t#{address["phone"]}"
-  puts "Email Address:\t#{address["email"]}"
+  puts "Name:\t\t" + address["first_name"] + " " + address["last_name"]
+  puts "Phone Number:\t" + address["phone"]
+  puts "Email Address:\t" + address["email"]
   puts "\n"
 end
 

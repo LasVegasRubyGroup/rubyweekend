@@ -10,9 +10,9 @@ end
 
 def list
   @address_book.each do |address|
-    puts "Name:\t\t#{address["first_name"]} #{address["last_name"]}"
-    puts "Phone Number:\t#{address["phone"]}"
-    puts "Email Address:\t#{address["email"]}"
+    puts "Name:\t\t" + address["first_name"] + " " + address["last_name"]
+    puts "Phone Number:\t" + address["phone"]
+    puts "Email Address:\t" + address["email"]
     puts "\n"
   end
 end
