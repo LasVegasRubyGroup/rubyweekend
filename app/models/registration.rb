@@ -10,6 +10,6 @@ class Registration < ActiveRecord::Base
   attr_accessible :card_number, :card_cvc, :card_expiry_month, :card_expiry_year
 
   def self.full?
-    self.count >= 21
+    self.count >= 20
   end
 end
