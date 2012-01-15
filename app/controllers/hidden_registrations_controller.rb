@@ -1,6 +1,6 @@
 class HiddenRegistrationsController < ApplicationController
   def new
-    render("full") and return if Registration.hidden_full?
+    render("registrations/full") and return if Registration.hidden_full?
     @registration = Registration.new
   end
 
@@ -15,8 +15,8 @@ class HiddenRegistrationsController < ApplicationController
       RegistrationMailer.confirmation_email(@registration).deliver
 
       case Rails.env
-      when "production" then redirect_to(registration_url(@registration.token, :host => "rubyweekend.heroku.com", :protocol => "http://"))
-      else redirect_to(registration_path(@registration.token))
+      when "production" then redirect_to(hidden_registration_url(@registration.token, :host => "rubyweekend.heroku.com", :protocol => "http://"))
+      else redirect_to(hidden_registration_path(@registration.token))
       end
     else
       render(:new)
@@ -60,7 +60,7 @@ private
   end
 
 def kyle
-  
+
 end
 
 end
