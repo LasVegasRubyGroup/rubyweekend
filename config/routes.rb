@@ -4,5 +4,11 @@ Rubyweekend::Application.routes.draw do
 
   resources :registrations
 
+  resources :hidden_registrations
+
+  match '/kyle_registration', :to => 'hidden_registrations#new'
+
+
+
   root :to => "pages#index"
 end

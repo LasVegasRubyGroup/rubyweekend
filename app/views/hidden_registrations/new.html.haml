@@ -1,0 +1,48 @@
+.row
+  .threecol
+    %h1 Registration
+
+  .sevencol.last
+    - if @registration.errors.any?
+      #error_explanation
+        %h2 There was a problem with your registration:
+        %ul
+          - @registration.errors.full_messages.each do |msg|
+            %li= msg
+
+    = form_for(@registration, html: { id: "payment-form" }) do |f|
+      .section-wrapper
+        %ol
+          %li= label_tag("Name")
+          %li= f.text_field(:name)
+
+          %li= label_tag("Email")
+          %li= f.text_field(:email)
+
+          %li= label_tag(:card_number, "Credit Card Number")
+          %li= f.text_field(:card_number, size: 30, maxlength: 20)
+
+        %table
+          %tr
+            %td
+              %ol
+                %li= label_tag(:card_cvc, "CVV")
+                %li= f.text_field(:card_cvc, size: 3, maxlength: 4)
+
+            %td{ width: 15 }
+
+            %td
+              %ol
+                %li= label_tag("Expiration (MM/YYYY)")
+                %li
+                  = f.text_field(:card_expiry_month, size: 5, maxlength: 2)
+                  = f.text_field(:card_expiry_year, size: 5, maxlength: 4)
+
+        %ol
+          %li
+            = label_tag(:usrlib_membership, "Are you a member of /usr/lib?")
+            = f.select(:usrlib_membership, options_for_select([ [ "Yes, I am a member.", true ], [ "No, I am not a member.", false ] ], @registration.usrlib_membership), include_blank: true)
+
+      .section-wrapper.controls
+        %ol
+          %li= submit_tag("Submit Registration")
