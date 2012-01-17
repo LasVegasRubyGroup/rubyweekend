@@ -8,7 +8,7 @@ Rubyweekend::Application.routes.draw do
 
   #match '/rich_registration', :to => 'hidden_registrations#new'
   #match '/kyle_registration', :to => 'hidden_registrations#new'
-  match '/jackie_registration', :to => 'hidden_registrations#new'
+  #match '/jackie_registration', :to => 'hidden_registrations#new'
 
 
 
