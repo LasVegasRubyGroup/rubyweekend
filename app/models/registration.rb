@@ -14,6 +14,6 @@ class Registration < ActiveRecord::Base
   end
 
   def self.hidden_full?
-    self.count >= 23
+    self.count >= 26
   end
 end
