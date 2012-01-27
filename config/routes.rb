@@ -10,9 +10,9 @@ Rubyweekend::Application.routes.draw do
   #match '/kyle_registration', :to => 'hidden_registrations#new'
   #match '/jackie_registration', :to => 'hidden_registrations#new'
 
-  match '/joe_registration', :to => 'hidden_registrations#new'
-  match '/kelley_registration', :to => 'hidden_registrations#new'
-  match '/christian_registration', :to => 'hidden_registrations#new'
+  match '/rob_registration', :to => 'hidden_registrations#new'
+  #match '/kelley_registration', :to => 'hidden_registrations#new'
+  #match '/christian_registration', :to => 'hidden_registrations#new'
 
   root :to => "pages#index"
 end
