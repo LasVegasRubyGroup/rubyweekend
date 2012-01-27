@@ -15,7 +15,7 @@
     - unless Registration.full?
       = link_to(@registration_url, class: "register") do
         %h1 Register Today
-        %p="Only #{20 - Registration.all.size} seats remain!"
+        %p="Only #{27 - Registration.all.size} seats remain!"
     - else
       = link_to(new_waitlist_path,  class: "register") do
         %h1 This Workshop is Full
