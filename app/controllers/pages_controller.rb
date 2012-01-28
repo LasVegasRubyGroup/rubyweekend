@@ -5,4 +5,8 @@ class PagesController < ApplicationController
     else new_registration_path
     end
   end
+
+  def resources
+  	
+  end
 end

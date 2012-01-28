@@ -6,13 +6,7 @@ Rubyweekend::Application.routes.draw do
 
   resources :hidden_registrations
 
-  #match '/rich_registration', :to => 'hidden_registrations#new'
-  #match '/kyle_registration', :to => 'hidden_registrations#new'
-  #match '/jackie_registration', :to => 'hidden_registrations#new'
-
-  match '/rob_registration', :to => 'hidden_registrations#new'
-  #match '/kelley_registration', :to => 'hidden_registrations#new'
-  #match '/christian_registration', :to => 'hidden_registrations#new'
-
   root :to => "pages#index"
+  match '/resources', :to => 'pages#resources', :as => :resources
+
 end
