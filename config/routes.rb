@@ -10,7 +10,6 @@ Rubyweekend::Application.routes.draw do
 
   root :to => "pages#index"
   match '/resources', :to => 'pages#resources', :as => :resources
-  match '/survey', :to => 'pages#survey', :as => :resources
-
+  match '/survey', :to => 'pages#survey', :as => :survey
 
 end

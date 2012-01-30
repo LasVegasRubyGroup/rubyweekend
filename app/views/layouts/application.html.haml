@@ -23,8 +23,15 @@
         .row
           .tencol.last
             %p
-              == &copy; 2011 Las Vegas Ruby Group #{link_to("meetup.com/las-vegas-ruby-on-rails", "http://www.meetup.com/las-vegas-ruby-on-rails")}
+              = link_to("Learing Resources", resources_path)
+              = link_to("Survey", survey_path)
+
               = link_to("@rubyweekend", "http://twitter.com/rubyweekend")
+        .row
+          .tencol.last
+            %p
+              == &copy; 2011 Las Vegas Ruby Group #{link_to("meetup.com/las-vegas-ruby-on-rails", "http://www.meetup.com/las-vegas-ruby-on-rails")}
+              
 
     :javascript
       var _gaq = _gaq || [];
