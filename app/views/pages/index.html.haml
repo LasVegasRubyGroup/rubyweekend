@@ -18,10 +18,8 @@
         %p="Only #{27 - Registration.all.size} seats remain!"
     - else
       = link_to(new_waitlist_path,  class: "register") do
-        %h1 This Workshop is Full
-        %p Signup for the wait list if any seats become available.
-        %p OR
-        %p Follow @RubyWeekend on Twitter be updated about future events. 
+        %h1 This Workshop is Over
+        %p Signup for our notification list and we'll send you an email when there is another workshop.
 
     %h2 How much is it?
     %p One weekend of your time and <strong>$50</strong>. It also includes a membership to #{link_to("\/usr/lib", "http://usrlib.org", :target => 'new')}, if you don't already have one. ($25 value)
