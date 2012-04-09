@@ -6,6 +6,8 @@ class RegistrationsController < ApplicationController
 
   def create
     @registration = Registration.new(params[:registration])
+    @registration.rw_number = 2
+    @registration.rw_date = '05/19/2012'
 
     token = create_token(@registration)
 

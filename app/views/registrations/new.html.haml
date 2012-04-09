@@ -13,7 +13,7 @@
     = form_for(@registration, html: { id: "payment-form" }) do |f|
       .section-wrapper
         %ol
-          %li= label_tag("Name")
+          %li= label_tag("Full Name")
           %li= f.text_field(:name)
 
           %li= label_tag("Email")

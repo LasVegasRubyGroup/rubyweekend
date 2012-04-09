@@ -11,26 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111220001150) do
+ActiveRecord::Schema.define(:version => 20120409192312) do
 
   create_table "registrations", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.integer  "amount"
-    t.string   "token"
-    t.string   "card_last_four"
-    t.string   "card_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "usrlib_membership"
+    t.string    "name"
+    t.string    "email"
+    t.integer   "amount"
+    t.string    "token"
+    t.string    "card_last_four"
+    t.string    "card_type"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.boolean   "usrlib_membership"
+    t.integer   "rw_number"
+    t.datetime  "rw_date"
   end
 
   create_table "waitlists", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "phone"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.string    "email"
+    t.string    "phone"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
 end
