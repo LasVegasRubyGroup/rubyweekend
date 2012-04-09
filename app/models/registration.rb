@@ -1,7 +1,9 @@
 class Registration < ActiveRecord::Base
   validates_uniqueness_of :email
   validates_presence_of :name, :email
-  validates_inclusion_of :usrlib_membership, :in => [ true, false ], :message => "question not answered"
+  validates_inclusion_of :agreed_to_refund_policy, 
+  :agreed_to_min_requirements, :in => [ true, false ],
+  :message => "question not answered"
 
   attr_accessor :card_number, :card_cvc
   attr_accessor :card_expiry_month, :card_expiry_year
