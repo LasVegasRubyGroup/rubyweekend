@@ -14,7 +14,7 @@
             = link_to(image_tag("logo.png"), root_path)
 
           #date.fivecol
-            %h1 January 28th/29th 2012
+            %h1 March 19th/20th 2012
 
       #content
         = yield
@@ -29,8 +29,10 @@
         .row
           .tencol.last
             %p
-              == &copy; 2011 Las Vegas Ruby Group #{link_to("meetup.com/las-vegas-ruby-on-rails", "http://www.meetup.com/las-vegas-ruby-on-rails")}
-              
+            &copy; 2012
+            =link_to("Las Vegas Ruby Group", "http://www.meetup.com/las-vegas-ruby-on-rails")
+            |
+            =link_to("Join Now", "http://www.meetup.com/las-vegas-ruby-on-rails/join/")
 
     :javascript
       var _gaq = _gaq || [];

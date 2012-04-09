@@ -1,6 +1,5 @@
 .row
-  .threecol
-    %h1 Waitlist
+  %h1 Email me when a spot is available.
 
   .sevencol.last
     - if @waitlist.errors.any?
@@ -19,9 +18,6 @@
           %li= label_tag("Email")
           %li= f.text_field(:email)
 
-          %li= label_tag("Phone")
-          %li= f.text_field(:phone)
-
       .section-wrapper.controls
         %ol
-          %li= submit_tag("Waitlist Me")
+          %li= submit_tag("Notify Me")
