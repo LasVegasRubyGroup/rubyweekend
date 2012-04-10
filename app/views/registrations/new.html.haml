@@ -13,7 +13,7 @@
     = form_for(@registration, html: { id: "payment-form" }) do |f|
       .section-wrapper
         %ol
-          %li= label_tag("Name")
+          %li= label_tag("Full Name")
           %li= f.text_field(:name)
 
           %li= label_tag("Email")
@@ -38,10 +38,16 @@
                   = f.text_field(:card_expiry_month, size: 5, maxlength: 2)
                   = f.text_field(:card_expiry_year, size: 5, maxlength: 4)
 
-        %ol
-          %li
-            = label_tag(:usrlib_membership, "Are you a member of /usr/lib?")
-            = f.select(:usrlib_membership, options_for_select([ [ "Yes, I am a member.", true ], [ "No, I am not a member.", false ] ], @registration.usrlib_membership), include_blank: true)
+        / %ol
+
+
+        /   %li
+        /   = label_tag(:agreed_to_refund_policy, 'I agree to the Ruby Weekend refund policy')
+        /   = f.check_box(:agreed_to_refund_policy)
+
+        /   %li
+        /   = f.check_box(:agreed_to_min_requirements)
+        /   = label_tag(:agreed_to_min_requirements, 'My laptop meets the minimum requirements')
 
       .section-wrapper.controls
         %ol

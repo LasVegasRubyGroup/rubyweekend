@@ -6,6 +6,8 @@ class RegistrationsController < ApplicationController
 
   def create
     @registration = Registration.new(params[:registration])
+    @registration.rw_number = 2
+    @registration.rw_date = Time.now
 
     token = create_token(@registration)
 
@@ -40,7 +42,7 @@ private
         exp_month: registration.card_expiry_month,
         exp_year: registration.card_expiry_year,
         cvc: registration.card_cvc },
-      amount: 5000,
+      amount: 10000,
       currency: "usd")
   end
 
