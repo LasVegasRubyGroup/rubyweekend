@@ -11,5 +11,13 @@ class PagesController < ApplicationController
 
   def survey
   end
+
+  def refund_policy
+    #render :layout => false
+  end
+
+  def hardware_requirements
+    #render :layout => false
+  end
   
 end
