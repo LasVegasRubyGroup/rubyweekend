@@ -5,6 +5,6 @@ class RegistrationMailer < ActionMailer::Base
     @registration = registration
     mail(to: registration.email,
          bcc: "judd@rubyweekend.com",
-         subject: "Ruby Weekend Registration Confirmation")
+         subject: "Ruby Weekend Registration Confirmation - #{@registration.name}")
   end
 end

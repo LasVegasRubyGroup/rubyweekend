@@ -4,7 +4,7 @@
 
     %h3 You can print this for your records. This message via email.
 
-    %p We have receieved your registration information and payment. We exited to have you as a part of Ruby Weekend.
+    %p We have received your registration information and payment. We exited to have you as a part of Ruby Weekend.
 
     %p We'll keep you up to date on any new information that might come up before the event. If you have any questions, please email #{mail_to("judd@rubyweekend.com", "judd@rubyweekend.com")}.
     %p For you reference your confirmation number is #{@registration.token}.
@@ -12,3 +12,6 @@
     %p 
     Today's Date:
     = Time.now.strftime('%D')
+    %p 
+    Attendees Name: 
+    = @registration.name
