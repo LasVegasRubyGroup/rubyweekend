@@ -4,6 +4,9 @@
 // = require_self
 
 $green: #36c269
+$greenDark: #29b35e
+$greenDarker: #239950
+
 $blue: rgba(39, 170, 225, 1)
 $white: rgba(255, 255, 255, 1)
 $black: #000
@@ -25,8 +28,7 @@ a
   font-weight: bold
 
   &.register
-    background: $black
-    opacity: 0.35
+    background: $greenDark
     border: 1px solid white
     display: block
     margin-bottom: 1em
@@ -35,8 +37,7 @@ a
     text-align: center
 
     &:hover
-      background: $black
-      opacity: 0.5
+      background: $greenDarker
 
     p
       margin-bottom: .5em
@@ -69,13 +70,13 @@ table.schedule
     vertical-align: top
 
   th
-    background: #29b35e
+    background: $greenDark
     padding: .5em
     text-align: right
     width: 8em
 
     &.day
-      background: #239950
+      background: $greenDarker
 
   td
     padding: .5em
