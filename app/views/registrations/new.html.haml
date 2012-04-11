@@ -3,6 +3,12 @@
     %h1 Registration
     %p Remember, Ruby Weekend is geared for those with little or no programing experience; however anyone is welcome to attend.
 
+    %h1 Only $100
+    %h3 That's right, just $100 for a two day workshop! 
+
+    %p A volunteer effort by The Las Vegas Ruby Group.
+    =link_to('View Refund Policy', refund_policy_path, :target => 'new') 
+
   .sevencol.last
     - if @registration.errors.any?
       #error_explanation

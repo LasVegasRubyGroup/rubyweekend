@@ -12,7 +12,7 @@ Rubyweekend::Application.routes.draw do
   match '/resources', :to => 'pages#resources', :as => :resources
   match '/survey', :to => 'pages#survey', :as => :survey
   match '/refund_policy', :to => 'pages#refund_policy', :as => :refund_policy
-  match '/hardware_requirements', :to => 'pages#hardware_requirements', :as => :refund_policy
+  match '/hardware_requirements', :to => 'pages#hardware_requirements', :as => :hardware_requirements
 
 
 
