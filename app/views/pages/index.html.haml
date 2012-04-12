@@ -17,9 +17,14 @@
         %h1 Register Today
         %p="Only #{20 - Registration.ruby_weekend_2.size} seats remain!"
     - else
+      %h1 This Workshop Is Full
+      %p We sold out! Sometimes people cancel and a becomes available. We'll notify people two ways:
+
       = link_to(new_waitlist_path,  class: "register") do
-        %h1 We're almost ready. :)
-        %p Sign up for our notification list and we'll send you an email when the workshop opens for registration.
+        %h2 Sign up for email notifications
+      %h2 or 
+      = link_to('http://twitter.com/search?q=rubyweekend',  class: "register") do
+        %h2 Follow us on twitter: @rubyweekend
 
     %h2 How much is it?
     %p One weekend of your time and <strong>$100</strong>.
@@ -65,6 +70,8 @@
     %h1 Where
 
   #venue.eightcol.last
+    %h1.date /usr/lib
+
     %p
       = link_to(image_tag("/assets/venue/rw_1c_thumb.jpg", class: "photo"), "/assets/venue/rw_1c.jpg", rel: "facebox")
       = link_to(image_tag("/assets/venue/rw_1b_thumb.jpg", class: "photo"), "/assets/venue/rw_1b.jpg", rel: "facebox")
@@ -102,24 +109,33 @@
           %p We will be meeting downstairs at the Beat House for coffee and breakfast and hopefully to wake up.
 
       %tr
-        %th 9:30 - 10:00
+        %th 9:30 - 9:45
         %td
-          %h1 What is Ruby and Rails?
+          %h1 What is Ruby and Rails? - Jeremy
           %p Find out why startups love Ruby on Rails and how it can help you deliver business value faster.
+          /just Jeremy talking
 
       %tr
-        %th 10:00 - 10:30
+        %th 9:45 - 10:30
         %td
-          %h1 Getting Started (Setup)
+          %h1 Getting Started (Setup) - ?
           %p Here we will make sure everyones machine is ready to start developing their first Ruby application.
-      %tr
-        %th 10:30 - 12:00
-        %td
-          %h1 Intro to Programing (First Taste)
-          %p We'll establish the building blocks for creating applications that actually do something useful.
 
       %tr
-        %th 12:00 - 2:00
+        %th 10:30 - 10:45
+        %td
+          %h1 Break
+          %p Use the potty or get coffee (not both)
+
+      %tr
+        %th 10:45 - 1:00
+        %td
+          %h1 Intro to Programing (First Taste) - Bob
+          %p We'll establish the building blocks for creating applications that actually do something useful.
+          /data types, variables, arrays, if statements, conditionals and blocks, .rb files, irb, running a ruby file
+
+      %tr
+        %th 1:00 - 2:00
         %td
           %h1 Lunch Break
           %p The Beat is open for lunch as well as many other great restaurants in the downtown area. The team will also be available for questions during these two hours.
@@ -127,14 +143,28 @@
       %tr
         %th 2:00 - 3:30
         %td
-          %h1 Intro to Programing (Second Helping)
-          %p Using the building blocks established in part one, we'll introduce more advance concepts and build an even cooler app!
+          %h1 Intro to Programing (Second Helping) - Jeremy
+          %p Using the building blocks established in part one, we'll introduce more advance concepts and build an even cooler app!        
+          /classes, methods, iteration(.each), Jeremy's people app
 
       %tr
-        %th 5:00 - 6:00
+        %th 3:30 - 3:45
         %td
-          %h1 Recap + Q &amp; A
-          %p The crew wll be available to answer any questions you may have that were not answered during the class.
+          %h1 Break
+          %p Use the potty or get candy (not both)
+      %tr
+        %th 3:45 - 5:00
+        %td
+          %h1 The Ruby Workout - Jeremy
+          %p Writing code is awesome.
+
+      %tr
+        %th 5:00 - 6:00 - Judd
+        %td
+          %h1 Intro to Rails - Bob
+          %p Find out why the Ruby on Rails framework helps developers build applications quickly and enforces best practices.
+          /generate a new app, walk through of the files, explain it's a frame work
+          /slides shows
 
     %table.schedule
       %tr
@@ -143,29 +173,45 @@
       %tr
         %th 9:00 - 9:30
         %td
-          %h1 Refresher
-          %p It's still early, lets get a quick recap of what we covered the day before.
+          %h1 Coffee, Breakfast, Registration
+          %p We will be meeting downstairs at the Beat House for coffee and breakfast and hopefully to wake up.
 
       %tr
         %th 9:30 - 10:00
         %td
-          %h1 Alphabet Soup Of The Web
-          %p If you're going to build a web app, you're going to need to know some of the building blocks.
+          %h1 Refresher - Jeremy
+          %p It's still early, lets get a quick recap of what we covered the day before.
 
       %tr
         %th 10:00 - 10:30
         %td
-          %h1 How Ruby on Rails Fits In
+          %h1 App generation - Bob
           %p Find out why the Ruby on Rails framework helps developers build applications quickly and enforces best practices.
+          /get everyone and running on rails
 
       %tr
-        %th 10:30 - 12:00
+        %th 10:30 - 10:45
         %td
-          %h1 Application Generation
-          %p Getting started with a Rails application couldn't be easier. Here we learn how to start one and what options we have available.
+          %h1 Break
+          %p Use the potty or get coffee (not both)
+
 
       %tr
-        %th 12:00 - 2:00
+        %th 10:45 - 1:00
+        %td
+          %h1 Building a rails app  - Bob
+          %p Getting started with a Rails application couldn't be easier. Here we learn how to start one and what options we have available.
+          /create welcome page
+          /add logo
+          /scaffolding - TODO model
+          /add TODO
+          /twitter bootstrap
+          /validations
+          /notes model
+          /notes association
+
+      %tr
+        %th 1:00 - 2:00
         %td
           %h1 Lunch Break
           %p The Beat House is open for lunch as well as many other great restaurants in the downtown area.
@@ -173,13 +219,19 @@
       %tr
         %th 2:00 - 5:00
         %td
-          %h1 Building the Application
+          %h1 Finishing the rails app - Jeremy
           %p We really get our hands dirty here and build our application from the ground up.
+
+          /user model
+          /authentication
+          /pagination
+          /gravitar for user image (helper method)
+
 
       %tr
         %th 5:00 - 6:00
         %td
-          %h1 Q &amp; A
+          %h1 Deploying - Wrap up
           %p The crew will be available to answer any questions you may have that were not answered during the class.
 
 .row
