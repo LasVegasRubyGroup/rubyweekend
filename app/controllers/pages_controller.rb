@@ -13,7 +13,10 @@ class PagesController < ApplicationController
   end
 
   def refund_policy
-    #render :layout => false
+    @registration_url = case Rails.env
+    when "production" then new_registration_url(:host => "rubyweekend.heroku.com", :protocol => "https://")
+    else new_registration_path
+    end
   end
 
   def hardware_requirements
