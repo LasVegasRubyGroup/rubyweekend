@@ -1,0 +1,17 @@
+.row
+  .tencol.lat
+    %h2 Registered
+    %ol
+      - @registered.each do |registered|
+        %li
+          = registered.name
+          = registered.email
+
+    %br
+    -if @waitlist.any?
+      %h2 Wait List
+      %ol
+        - @waitlist.each do |waitlist|
+          %li
+            = waitlist.name
+            = waitlist.email
