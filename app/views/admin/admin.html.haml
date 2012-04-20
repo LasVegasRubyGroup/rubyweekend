@@ -1,6 +1,8 @@
 .row
   .tencol.lat
-    %h2 Registered
+    %h2 
+      =@registered.size
+      Registered
     %ol
       - @registered.each do |registered|
         %li
@@ -9,7 +11,9 @@
 
     %br
     -if @waitlist.any?
-      %h2 Wait List
+      %h2 
+        =@waitlist.size
+        Wait List
       %ol
         - @waitlist.each do |waitlist|
           %li
