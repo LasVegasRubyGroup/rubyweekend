@@ -27,4 +27,7 @@ Rubyweekend::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  ENV["ADMIN_NAME"] = "admin"
+  ENV["ADMIN_PASSWORD"] = "password"
 end
