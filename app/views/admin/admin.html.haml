@@ -3,19 +3,24 @@
     %h2 
       =@registered.size
       Registered for RW 2
-    %ol
+    %table
       - @registered.each do |registered|
-        %li
-          = registered.name
-          = registered.email
+        %tr
+          %td
+            = registered.name
+          %td
+            = mail_to registered.email, registered.email
 
     %br
     -if @waitlist.any?
       %h2 
         =@waitlist.size
         Wait List
-      %ol
-        - @waitlist.each do |waitlist|
-          %li
+    %table
+      - @waitlist.each do |waitlist|
+        %tr
+          %td
             = waitlist.name
-            = waitlist.email
+          %td
+            = mail_to waitlist.email, waitlist.email
+
