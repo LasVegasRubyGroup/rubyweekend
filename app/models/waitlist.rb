@@ -3,9 +3,9 @@ class Waitlist < ActiveRecord::Base
   validates_uniqueness_of :email
 
   def clean_up
-  	registration_emails = Registration.all.map { |r| r.email }
+  	registration_emails = Registration.all.map { |r| r.email.downcase }
 
-  	if registration_emails.include?(self.email)
+  	if registration_emails.include?(self.email.downcase)
   		self.destroy
   	end
 	end
