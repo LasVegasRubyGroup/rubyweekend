@@ -10,6 +10,8 @@
             = registered.name
           %td
             = mail_to registered.email, registered.email
+          %td
+            = registered.created_at.strftime('%D')
 
     %br
     -if @waitlist.any?
@@ -23,4 +25,5 @@
             = waitlist.name
           %td
             = mail_to waitlist.email, waitlist.email
-
+          %td
+            = waitlist.created_at.strftime('%D')
