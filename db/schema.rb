@@ -30,11 +30,11 @@ ActiveRecord::Schema.define(:version => 20120409213731) do
   end
 
   create_table "waitlists", :force => true do |t|
-    t.string    "name"
-    t.string    "email"
-    t.string    "phone"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

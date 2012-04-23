@@ -14,7 +14,7 @@ Rubyweekend::Application.routes.draw do
   match '/refund_policy', :to => 'pages#refund_policy', :as => :refund_policy
   match '/hardware_requirements', :to => 'pages#hardware_requirements', :as => :hardware_requirements
 
-
+  match '/admin', :to => 'admin#admin', :as => :admin
 
   match '/notification_list', :to => 'waitlists#new', :as => :survey
 
