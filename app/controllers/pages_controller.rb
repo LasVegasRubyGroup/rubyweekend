@@ -23,4 +23,7 @@ class PagesController < ApplicationController
     #render :layout => false
   end
   
+  def glossary
+  end
+  
 end

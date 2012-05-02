@@ -1,6 +1,7 @@
 // = require 1140
 // = require facebox
 // = require form
+// = require syntaxcolors
 // = require_self
 
 $green: #24c072
@@ -10,6 +11,7 @@ $greenDarker: #1fa663
 $blue: rgba(39, 170, 225, 1)
 $white: rgba(255, 255, 255, 1)
 $black: #000
+$gray: darken($white, 15%)
 
 body
   background: $green
@@ -121,3 +123,28 @@ table.schedule
   box-shadow: 0 0 10px rgba(0, 0, 0, .15)
   margin-right: .5em
   width: 163px
+
+.infotable
+  background-color: $gray
+  border: 1px solid darken($gray, 10%)
+  width: 100%
+  color: lighten($black, 5%)  
+  tr
+    th
+      padding: 4px
+      border-bottom: 1px solid darken($gray, 10%)
+      font-size: 20px
+      text-shadow: 1px 1px 0px #eeeeee
+    td
+      padding: 3px 5px
+      border-bottom: 1px solid darken($gray, 10%)
+      .code
+        width: 520px
+        font-size: 14px
+        pre
+          &.ruby
+            background-color: $white !important
+          &.console
+            background-color: $black !important
+      a
+        color: $greenDark

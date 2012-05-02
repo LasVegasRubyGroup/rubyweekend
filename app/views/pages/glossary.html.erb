@@ -1,0 +1,478 @@
+<div class="row">
+  <h1>RubyWeekend Glossary</h1>
+  <p>Here are some words you may hear us say, and have no clue what we are talking about.</p>
+  <br clear="all">
+  <div class="elevencol">
+    <table cellspacing="0" cellpadding="0" class="infotable">
+      <tbody>
+        <tr>
+          <th>Word</th>
+          <th>Meaning</th>
+          <th>Example</th>
+        </tr>
+        <tr>
+          <td><a name="argument"></a>argument</td>
+          <td>a variable passed to a <a href="#method">method</a>.</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+def some_method_name(argument1, argument2)
+  #do stuff here
+end
+</pre>
+            </div>            
+          </td>
+        </tr>
+        <tr>
+          <td>Array</td>
+          <td>A collection of <a href="#object">objects</a></td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+[1, "hello", Date.today, [2, 3]]
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>bang</td>
+          <td>the exclamation mark. Means "not" at the beginning, and destructive at the end</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+cool = true
+!cool # not cool
+Post.save! # raise an error if this doesn't save
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>block</td>
+          <td>a group of code injected into a <a href="#method">method</a></td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+[1,2,3].each do |number|
+  #do stuff with number
+end
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><a name="boolean"></a>boolean</td>
+          <td>something that is true or false</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+true
+false
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>class</td>
+          <td>a defined <a href="#object">object</a> name that may contain <a href="#method">methods</a></td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+class Animal
+  # methods in the Animal class
+end
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>concatenation</td>
+          <td>adding something to something else</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+[1,2,3] &lt;&lt; 4
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>conditional</td>
+          <td>an equation that returns a <a href="#boolean">boolean</a> based on some data</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+this_is_true = true
+if this_is_true
+  # do stuff
+end
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>constant</td>
+          <td>a pointer to an <a href="#object">object</a> that remains the same. begins with capital letter</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+PI = 3.1415
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>command</td>
+          <td>an <a href="#argument">argument</a> passed to a program</td>
+          <td>
+            <div class="code">
+<pre class="console">
+$ rails console
+$ rails server  
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>comment</td>
+          <td>a way to make notes in your program</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+# making some comment
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>data type</td>
+          <td>A specific type of data</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+String
+Fixnum
+Array
+# there are others as well
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>directory</td>
+          <td>a folder that contains other folders and files</td>
+          <td>
+            <div class="code">
+              /usr/lib
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>dot</td>
+          <td>a period. used for <a href="#method">method</a> calls on an <a href="#object">object</a></td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+Date.today
+"BOOM!".downcase
+cat.talk
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>environment</td>
+          <td>a specific layout for your code. Usually development for local, and production for live</td>
+          <td>
+            <div class="code">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>error</td>
+          <td>when something you didn't want to happen happens</td>
+          <td>
+            <div class="code">
+<pre class="console">
+NameError: undefined local variable or method `kablam' for main:Object
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>escaping</td>
+          <td>a means of allowing special characters under specific circumstances</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+'don\'t let me catch you with Billy\'s dog again, Jimmy!'
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Fixnum</td>
+          <td>an <a href="#integer">Integer</a></td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+1
+-123
+87324
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Float</td>
+          <td>Numbers with other numbers after the decimal place</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+2.5
+3.14
+-16.75
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>framework</td>
+          <td>a set of <a href="#library">libraries</a> used in conjunction to make your life easier</td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr>
+          <td>function</td>
+          <td>a <a href="#method">method</a></td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+def make_sandwich(meat, cheese, toppings=[])
+  # making a sandwich
+end
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>gem</td>
+          <td>a <a href="#library">library</a> of ruby code packaged up for ease of use</td>
+          <td>
+            <div class="code">
+<pre class="console">
+$ gem install bundler
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Hash</td>
+          <td>A collection of key/value pair items</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+h = {:key => 'some value'}
+puts h[:key] # returns "some value"
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><a name="integer"></a>Integer</td>
+          <td>Whole numbers (positive or negative)</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+1
+-123
+87324
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>interpolation</td>
+          <td>Code inserted in middle of a string</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+name = "Jeremy"
+puts "Hello, #{name}"
+puts "The value of 1 plus 1 is #{1 + 1}"
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>irb</td>
+          <td>Interactive Ruby Console</td>
+          <td>
+            <div class="code">
+<pre class="console">
+$ irb
+1.9.2p290 :001 > 
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><a name="iterate"></a>iterate</td>
+          <td>perform an action on each <a href="#object">object</a> in a collection</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+@employees.each do |employee|
+  puts employee.name
+end
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><a name="library"></a>library</td>
+          <td>A file or group of files used together to create an answer to a single task</td>
+          <td>
+            <div class="code">
+              
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>loop</td>
+          <td>when code just runs over and over. A type of <a href="#iterate">iteration</a></td>
+          <td>
+            <div class="code">
+              
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><a name="method"></a>method</td>
+          <td>a defined set of instructions</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+def drink(liquid)
+  puts "mmm, this #{liquid} really quenches my thirst!"
+end
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>module</td>
+          <td>A way to group methods that don't belong to a particular <a href="#object">object</a>. Modules can be included in classes</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+module Helper
+  # some helper methods
+end
+class Something
+  include Helper
+end
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>nil</td>
+          <td>non existent. nothing</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+x = nil
+x.nil? # true
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><a name="object"></a>object</td>
+          <td>A changeable, useable, thing that can be manipulated. Everything in Ruby is an object</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+@person = Person.new({:name => 'Billy'})
+# @person is the object
+food = "hamburger"
+# food is also an object
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>parameter</td>
+          <td>similar to an <a href="#argument">argument</a></td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>recursion</td>
+          <td>When a method calls itself.</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+def fib(n)
+  return n if (0..1).include? n
+  fib(n-1) + fib(n-2) if n > 1
+end
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>String</td>
+          <td>letters, words, symbols, and stuff inside quotation marks</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+"hello"
+'rubyweekend'
+"324"
+</pre>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>truncate</td>
+          <td>make something shorter</td>
+          <td>
+            <div class="code">
+              this is a really long paragraph about some...
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>url</td>
+          <td>a web address</td>
+          <td>
+            <div class="code">
+              http://rubyweekend.com
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>variable</td>
+          <td>a pointer to an object that can be changed at any time. all lower case</td>
+          <td>
+            <div class="code">
+<pre class="ruby">
+a = "Apple"
+@box = Box.new
+@@num = lambda { |x| x + 5 }
+</pre>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
