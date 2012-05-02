@@ -27,7 +27,13 @@ class Player
   end
   
   def points
-    @hand.inject(0) { |sum, card| sum += Deck::CARDS[card[0]] }
+    #@hand.inject(0) { |sum, card| sum += Deck::CARDS[card[0]] }
+    sum = 0
+    @hand.each do |card|
+      sum += Deck::CARDS[card[0]]
+    end
+    
+    sum
   end
   
 end
