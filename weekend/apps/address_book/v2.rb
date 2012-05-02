@@ -1,5 +1,3 @@
-require "rubygems"
-
 @address_book = []
 
 russ = {

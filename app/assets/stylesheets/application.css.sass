@@ -3,11 +3,16 @@
 // = require form
 // = require_self
 
+$green: #24c072
+$greenDark: #22b36a
+$greenDarker: #1fa663
+
 $blue: rgba(39, 170, 225, 1)
 $white: rgba(255, 255, 255, 1)
+$black: #000
 
 body
-  background: $blue
+  background: $green
   background-image: url(/assets/background.png)
   background-position: center -200px
   background-repeat: no-repeat
@@ -23,7 +28,7 @@ a
   font-weight: bold
 
   &.register
-    background: rgba(6, 85, 118, .4)
+    background: $greenDark
     border: 1px solid white
     display: block
     margin-bottom: 1em
@@ -32,7 +37,7 @@ a
     text-align: center
 
     &:hover
-      background: rgba(6, 85, 118, .9)
+      background: $greenDarker
 
     p
       margin-bottom: .5em
@@ -65,13 +70,13 @@ table.schedule
     vertical-align: top
 
   th
-    background: rgba(6, 85, 118, .2)
+    background: $greenDark
     padding: .5em
     text-align: right
     width: 8em
 
     &.day
-      background: rgba(6, 85, 118, .4)
+      background: $greenDarker
 
   td
     padding: .5em

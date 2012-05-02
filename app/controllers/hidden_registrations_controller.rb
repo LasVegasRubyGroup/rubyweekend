@@ -1,13 +1,11 @@
-class RegistrationsController < ApplicationController
+class HiddenRegistrationsController < ApplicationController
   def new
-    render("full") and return if Registration.full?
+    render("registrations/full") and return if Registration.hidden_full?
     @registration = Registration.new
   end
 
   def create
     @registration = Registration.new(params[:registration])
-    @registration.rw_number = 2
-    @registration.rw_date = Time.now
 
     token = create_token(@registration)
 
@@ -17,8 +15,8 @@ class RegistrationsController < ApplicationController
       RegistrationMailer.confirmation_email(@registration).deliver
 
       case Rails.env
-      when "production" then redirect_to(registration_url(@registration.token, :host => "rubyweekend.heroku.com", :protocol => "http://"))
-      else redirect_to(registration_path(@registration.token))
+      when "production" then redirect_to(hidden_registration_url(@registration.token, :host => "rubyweekend.heroku.com", :protocol => "http://"))
+      else redirect_to(hidden_registration_path(@registration.token))
       end
     else
       render(:new)
@@ -42,7 +40,7 @@ private
         exp_month: registration.card_expiry_month,
         exp_year: registration.card_expiry_year,
         cvc: registration.card_cvc },
-      amount: 10000,
+      amount: 5000,
       currency: "usd")
   end
 
@@ -60,4 +58,9 @@ private
 
     registration
   end
+
+def kyle
+
+end
+
 end

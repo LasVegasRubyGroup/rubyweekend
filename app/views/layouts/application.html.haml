@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Las Vegas Ruby Conference - Ruby Weekend
+    %title Las Vegas Ruby Rails Workshop - Ruby Weekend
     = stylesheet_link_tag(:application)
     = javascript_include_tag(:application)
     = csrf_meta_tags
@@ -14,7 +14,7 @@
             = link_to(image_tag("logo.png"), root_path)
 
           #date.fivecol
-            %h1 January 28th/29th 2012
+            %h1 May 19th/20th 2012
 
       #content
         = yield
@@ -23,13 +23,23 @@
         .row
           .tencol.last
             %p
-              == &copy; 2011 Las Vegas Ruby Group #{link_to("meetup.com/las-vegas-ruby-on-rails", "http://www.meetup.com/las-vegas-ruby-on-rails")}
-              = link_to("@rubyweekend", "http://twitter.com/rubyweekend")
+            &copy; 2012
+            =link_to("Las Vegas Ruby Group", "http://www.meetup.com/las-vegas-ruby-on-rails")
+            |
+            =#link_to("Join Now", "http://www.meetup.com/las-vegas-ruby-on-rails/join/")
+            =link_to('View Refund Policy', refund_policy_path, :target => 'new') 
+            |
+            =# link_to("Learning Resources", resources_path)
+              
+            = link_to("@rubyweekend", "http://twitter.com/rubyweekend")
+
+
+
 
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-11575163-7']);
-      _gaq.push(['_setDomainName', '.rubyweekend.com']);
+      _gaq.push(['_setDomainName', 'none']);
       _gaq.push(['_trackPageview']);
 
       (function() {

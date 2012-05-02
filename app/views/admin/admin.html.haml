@@ -1,0 +1,29 @@
+.row
+  .tencol.lat
+    %h2 
+      =@registered.size
+      Registered for RW 2
+    %table
+      - @registered.each do |registered|
+        %tr
+          %td
+            = registered.name
+          %td
+            = mail_to registered.email, registered.email
+          %td
+            = registered.created_at.strftime('%D')
+
+    %br
+    -if @waitlist.any?
+      %h2 
+        =@waitlist.size
+        Wait List
+    %table
+      - @waitlist.each do |waitlist|
+        %tr
+          %td
+            = waitlist.name
+          %td
+            = mail_to waitlist.email, waitlist.email
+          %td
+            = waitlist.created_at.strftime('%D')

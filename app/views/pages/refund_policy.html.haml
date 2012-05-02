@@ -1,0 +1,15 @@
+.row
+	.twocol
+		%h1 Refunds
+	.eightcol.last
+		%p The refund policy is simple: notify us via email at least two weeks before the workshop, we'll give you a refund. Send an email to #{mail_to("judd@rubyweekend.com", "judd@rubyweekend.com")} as soon as you know you will not be able to attend.
+		%p If you have questions, #{mail_to("judd@rubyweekend.com", "ask Judd")}! :)
+
+		- unless Registration.full?
+			= link_to(@registration_url, class: "register") do
+				%h1 Register Today
+				%p="Only #{20 - Registration.ruby_weekend_2.size} seats remain!"
+		- else
+			= link_to(new_waitlist_path,  class: "register") do
+				%h1 We're almost ready. :)
+				%p Sign up for our notification list and we'll send you an email when the workshop opens for registration.

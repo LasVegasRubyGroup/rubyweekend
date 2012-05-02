@@ -1,15 +1,6 @@
 .row
-
   .threecol
     %h1 Registration
-    %p Remember, Ruby Weekend is geared for those with little or no programing experience; however anyone is welcome to attend.
-
-    %h1 Only $100
-    %h3 That's right, just $100 for a two day workshop.
-
-    %p (This is volunteer effort by The Las Vegas Ruby Group.)
-    =link_to('View Refund Policy', refund_policy_path)
-
 
   .sevencol.last
     - if @registration.errors.any?
@@ -22,7 +13,7 @@
     = form_for(@registration, html: { id: "payment-form" }) do |f|
       .section-wrapper
         %ol
-          %li= label_tag("Full Name")
+          %li= label_tag("Name")
           %li= f.text_field(:name)
 
           %li= label_tag("Email")
@@ -48,29 +39,10 @@
                   = f.text_field(:card_expiry_year, size: 5, maxlength: 4)
 
         %ol
-
-
-          / %li
-          / = label_tag(:agreed_to_refund_policy, "I agree to the
-          /   = link_to Ruby Weekend refund policy, refund_policy_path}")
-          / = f.check_box(:agreed_to_refund_policy)
-
-          / %li
-          / = f.check_box(:agreed_to_min_requirements)
-          / = label_tag(:agreed_to_min_requirements, 'My laptop meets the minimum requirements')
+          %li
+            = label_tag(:usrlib_membership, "Are you a member of /usr/lib?")
+            = f.select(:usrlib_membership, options_for_select([ [ "Yes, I am a member.", true ], [ "No, I am not a member.", false ] ], @registration.usrlib_membership), include_blank: true)
 
       .section-wrapper.controls
         %ol
           %li= submit_tag("Submit Registration")
-.row
-  .sevencol.last
-
-    %h2 Quotes from previous Ruby Weekends
-
-    %p "The value of your 2 day conference far exceeds the [cost]. I've paid $1,000+ for conferences where I learned less!”
-
-    %p "Everything I expected and more. You guys are great fun and super presenters!"
-
-    %p "You had great presenters. Jeremy was especially exceptional."
-
-
