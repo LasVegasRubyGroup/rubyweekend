@@ -22,7 +22,7 @@
 
       = link_to(new_waitlist_path,  class: "register") do
         %h2 Sign up for email notifications
-      %h2 or 
+      %h2 or
       = link_to('http://twitter.com/search?q=rubyweekend',  class: "register") do
         %h2 Follow us on twitter: @rubyweekend
 
@@ -31,32 +31,32 @@
 
     %h2 Hardware Requirements
     %p A modern laptop (i.e. 2GB RAM, 4GB hard drive space available and WIFI capability).
-    %p 
-      No Netbooks. They were problematic during the first Ruby Weekend. However, if you are certain it meets the hardware requirements above, you can bring it. 
+    %p
+      No Netbooks. They were problematic during the first Ruby Weekend. However, if you are certain it meets the hardware requirements above, you can bring it.
       =link_to('Here is how you check your computers RAM.', 'http://windows.microsoft.com/en-US/windows-vista/Find-out-how-much-RAM-your-computer-has', :target => 'new')
 
     %h2 Prerequisites
     %p While you don't need programming experience, you should have some basic computer knowledge. I.e. how to save a file, point, click, drag, etc.
 
-    %p 
+    %p
       Also not required, but something which will make your life easier is an understanding of HTML and CSS. Best of all it's something you can start learning before the workshop begins.
       =link_to('We recommend completing these lessons from Codecademy;','http://www.codecademy.com/languages/web/topics/html-overview')
       it's a free service.
 
     %h2 Just $100, a weekend and I can become a web developer?
-    %p 
-      Ruby Weekend is a volunteer effort of the 
+    %p
+      Ruby Weekend is a volunteer effort of the
       =link_to('Las Vegas Ruby Group.', 'http://www.meetup.com/las-vegas-ruby-on-rails/', :target => 'new')
       We believe introducing others to programing over the course of the weekend is a great way to to give back to the local community.
     %p The purpose of this event is to give those with an interest in startups and an inclination to learn computer programing an introduction to Ruby and the Rails framework. While it's open to anyone who can make it to Las Vegas, we're really doing this to help #VegasTech grow it's developer base. The $100 cost serves to ensure those who sign up are committed and will actually show up; after all, there are just 20 spots and this is a great opportunity for the right people.
     %p At the end of the weekend, we aim to give attendees the tools to continue the process of learning to becoming a web developer and ultimately build their ideas into a reality.
-    
-    %p 
-      This is the second Ruby Weekend. 
+
+    %p
+      This is the second Ruby Weekend.
       =link_to('Here is a recap of the first event.', 'http://vegastech.com/ruby-weekend-a-recap/', :target => 'new' )
-    
+
     %p If you have any questions about Ruby Weekend, just email #{mail_to("judd@rubyweekend.com", "judd@rubyweekend.com")}.
-    
+
 
 .row
   .twocol
@@ -80,7 +80,7 @@
 
     %p.small Photos of the first Ruby Weekend at usr/lib
     %p
-  
+
       = link_to(image_tag("/assets/usrlib_logo.png", align: "right"), "http://usrlib.org", :target => 'new')
       #{link_to("\/usr/lib", "http://usrlib.org", :target => 'new')} is a community technology library, co-working hangout and meetup venue located in downtown Las Vegas on the second floor of the Emergency Arts building.
 
@@ -144,7 +144,7 @@
         %th 2:00 - 3:30
         %td
           %h1 Intro to Programing (Second Helping) - Jeremy
-          %p Using the building blocks established in part one, we'll introduce more advance concepts and lay the ground work for understand the rails framework.        
+          %p Using the building blocks established in part one, we'll introduce more advance concepts and lay the ground work for understand the rails framework.
           /classes, methods, iteration(.each), Jeremy's people app
 
       %tr
@@ -171,19 +171,19 @@
         %th.day{ colspan: 2 } Day Two
 
       %tr
-        %th 9:00 - 9:30
+        %th 9:00 - 9:15
         %td
           %h1 Coffee, Breakfast, Registration
           %p We will be meeting downstairs at the Beat House for coffee and breakfast and hopefully to wake up.
 
       %tr
-        %th 9:30 - 10:00
+        %th 9:15 - 9:45
         %td
           %h1 Refresher - Jeremy
           %p It's still early, lets get a quick recap of what we covered the day before.
 
       %tr
-        %th 10:00 - 10:30
+        %th 9:45 - 10:30
         %td
           %h1 App generation - Bob
           %p We're going to start creating a out TODO application.
@@ -268,7 +268,7 @@
       = image_tag("/assets/rubygroup/russ.jpg", class: "photo")
       %p #{link_to("@cloudsplitter", "http://twitter.com/cloudsplitter")} | #{link_to("vegastech.com/people/russ-smith", "http://vegastech.com/people/russ-smith/")}
       %p Russ knows Rails inside-out, including popular gems. He loves to dive into new technology in order to get the job done right. Russ has been writing code professionally for 10 years, has strong design background and is a frequent contributor to open source projects including #{link_to("Lacquer", "https://github.com/russ/lacquer")}.
- 
+
 
     - unless Registration.full?
       = link_to(@registration_url, class: "register") do
