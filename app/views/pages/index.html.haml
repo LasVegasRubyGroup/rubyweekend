@@ -259,10 +259,7 @@
       %p #{link_to("@JuddLillestrand", "http://twitter.com/JuddLillestrand")}
       %p After learning to code in his spare time, Judd wanted a community in Las Vegas to ask Ruby related questions. So he started the Las Vegas Ruby Group. He's been from zero development skills to to launching #{link_to("ScripSmart.com", "http://scripsmart.com")}. Judd has fostered the Las Vegas Ruby Group into one of the most successful user groups in the Las Vegas Tech Community.
 
-      / %h3 Jason Arhart
-      / = image_tag("/assets/rubygroup/jason.jpg", class: "photo")
-      / %p #{link_to("@jarhart", "http://twitter.com/jarhart")} | #{link_to("vegastech.com/people/jason-arhart", "http://vegastech.com/people/jason-arhart/")}
-      / %p Jason loves programing; he learns new languages for fun (seriously). At last count, he was familiar with 15 languages and loves Ruby for it's simplicity. You'll know Jason is on a roll when he's rubbing his hands together in front of this computer. Jason's been programming professionally for 19 years and working with Ruby for 10 years. In October of 2011 Jason joined the team at #{link_to("Originate", "http://www.originate.com/")}, Inc. to be their first engineer in Las Vegas.
+
 
       %h3 Russ Smith
       = image_tag("/assets/rubygroup/russ.jpg", class: "photo")
@@ -293,6 +290,17 @@
 
       %p Don was also at the first Ruby Weekend. He's the man behind Rocket36 Website Design & Application Dev Studio. Don was an integral part of the Ruby Weekend Dry: he drove Bob nuts and brought and old PC to ensure we'd have out bases covered.
 
+
+      %h3 Jason Arhart - Out of Town :(
+      = image_tag("/assets/rubygroup/jason.jpg", class: "photo")
+      %p #{link_to("@jarhart", "http://twitter.com/jarhart")}
+
+      %p Jason can't make this Ruby Weekend, but was an important part of making both the first and second ones happen.
+
+      / %p Jason loves programing; he learns new languages for fun (seriously). At last count, he was familiar with 15 languages and loves Ruby for it's simplicity. You'll know Jason is on a roll when he's rubbing his hands together in front of this computer. Jason's been programming professionally for 19 years and working with Ruby for 10 years. In October of 2011 Jason joined the team at #{link_to("Originate", "http://www.originate.com/")}, Inc. to be their first engineer in Las Vegas.
+
+    %br
+    %br
     - unless Registration.full?
       = link_to(@registration_url, class: "register") do
         %h1 Register Today
