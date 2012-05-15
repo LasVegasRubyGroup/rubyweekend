@@ -299,13 +299,12 @@
 
       / %p Jason loves programing; he learns new languages for fun (seriously). At last count, he was familiar with 15 languages and loves Ruby for it's simplicity. You'll know Jason is on a roll when he's rubbing his hands together in front of this computer. Jason's been programming professionally for 19 years and working with Ruby for 10 years. In October of 2011 Jason joined the team at #{link_to("Originate", "http://www.originate.com/")}, Inc. to be their first engineer in Las Vegas.
 
-    %br
-    %br
-    - unless Registration.full?
-      = link_to(@registration_url, class: "register") do
-        %h1 Register Today
-        %p="Only #{20 - Registration.ruby_weekend_2.size} seats remain!"
-    - else
-      = link_to(new_waitlist_path,  class: "register") do
-        %h1 We're almost ready. :)
-        %p Sign up for our notification list and we'll send you an email when the workshop opens for registration.
+
+    / - unless Registration.full?
+    /   = link_to(@registration_url, class: "register") do
+    /     %h1 Register Today
+    /     %p="Only #{20 - Registration.ruby_weekend_2.size} seats remain!"
+    / - else
+    /   = link_to(new_waitlist_path,  class: "register") do
+    /     %h1 We're almost ready. :)
+    /     %p Sign up for our notification list and we'll send you an email when the workshop opens for registration.
