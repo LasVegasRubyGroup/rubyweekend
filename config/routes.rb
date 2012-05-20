@@ -16,6 +16,6 @@ Rubyweekend::Application.routes.draw do
   match '/glossary', :to => 'pages#glossary', :as => :glossary
   match '/admin', :to => 'admin#admin', :as => :admin
 
-  match '/notification_list', :to => 'waitlists#new', :as => :survey
+  match '/notification_list', :to => 'waitlists#new', :as => :notification_list
 
 end
