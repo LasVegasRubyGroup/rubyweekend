@@ -4,9 +4,10 @@
 // = require syntaxcolors
 // = require_self
 
-$green: #43c565
-$greenDark: #27a858
-$greenDarker: #218f4b
+
+$off: #000
+$dark: #404040
+$darker: #262626
 
 $blue: rgba(39, 170, 225, 1)
 $white: rgba(255, 255, 255, 1)
@@ -14,8 +15,8 @@ $black: #000
 $gray: darken($white, 15%)
 
 body
-  background: $green
-  background-image: url(/assets/background.png)
+  background: $off
+  background-image: url(/assets/lvrug_background_off.png)
   background-position: center -200px
   background-repeat: no-repeat
   background-size: 100% auto
@@ -30,7 +31,7 @@ a
   font-weight: bold
 
   &.register
-    background: $greenDark
+    background: $dark
     border: 1px solid white
     display: block
     margin-bottom: 1em
@@ -39,7 +40,7 @@ a
     text-align: center
 
     &:hover
-      background: $greenDarker
+      background: $darker
 
     p
       margin-bottom: .5em
@@ -72,13 +73,13 @@ table.schedule
     vertical-align: top
 
   th
-    background: $greenDark
+    background: $dark
     padding: .5em
     text-align: right
     width: 8em
 
     &.day
-      background: $greenDarker
+      background: $darker
 
   td
     padding: .5em
@@ -155,4 +156,4 @@ table.schedule
           &.console
             background-color: $black !important
       a
-        color: $greenDark
+        color: $dark
