@@ -10,7 +10,7 @@ if Rails.env == "production"
   
 
   def admin
-    @registered = Registration.ruby_weekend_2.order('email ASC')
+    @registered = Registration.ruby_weekend_3.order('email ASC')
     @waitlist = Waitlist.order('email ASC')
   end
 
