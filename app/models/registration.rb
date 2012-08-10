@@ -13,11 +13,12 @@ class Registration < ActiveRecord::Base
   attr_accessible :card_number, :card_cvc, :card_expiry_month, :card_expiry_year
 
   scope :ruby_weekend_2, :conditions => { :rw_number => [2] }
- 
+  scope :ruby_weekend_3, :conditions => { :rw_number => [3] }
+
 
   def self.full?
     #true
-    self.ruby_weekend_2.count >= 20
+    self.ruby_weekend_3.count >= 20
   end
 
   def self.hidden_full?
