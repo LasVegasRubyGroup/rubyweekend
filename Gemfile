@@ -6,6 +6,7 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'exception_notification'
 
 group :assets do
   gem 'sass-rails', '~> 3.1.5'
