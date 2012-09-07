@@ -202,16 +202,8 @@
       %tr
         %th 10:45 - 1:00
         %td
-          %h1 Building the TODO app  - Bob
-          %p We'll take you though the process of adding a shiny logo to your new app and start creating the necessary components.
-          /create welcome page
-          /add logo
-          /scaffolding - TODO model
-          /add TODO
-          /twitter bootstrap
-          /validations
-          /notes model
-          /notes association
+          %h1 Creating user accounts & deploying to the web - Bob & Jeremy
+          %p We'll start by adding user accounts to secure access to registered users. Once the app is locked down we will deploy the app to the web.
 
       %tr
         %th 1:00 - 2:00
@@ -222,20 +214,25 @@
       %tr
         %th 2:00 - 5:00
         %td
-          %h1 Finishing the TODO app - Jeremy
-          %p Here we'll add user accounts so other can log in and use our fancy app.
-
-          /user model
-          /authentication
-          /pagination
-          /gravitar for user image (helper method)
-
+          %h1 Adding Features - Jeremy
+          %p
+            Before lunch we deployed our basic app the the web. The afternoon will be spent adding features to move our app beyond the basic todos.
+            %i
+              %br 
+              1. Creating static pages
+              %br 
+              2. Adding descriptions to TODOs
+              %br 
+              3. Adding notes to TODOs
+              %br 
+              4. Adding priority rankings
+             
 
       %tr
         %th 5:00 - 6:00
         %td
-          %h1 Deploying - Wrap up
-          %p If it's not live on the web, no one can use it. We'll show you how easy deploying your rails app is and why you won't need a background in systems administration.
+          %h1 Polishing, Re-Deploying, Extra Credit & Wrap up
+          %p We will spend the last hour refining the layout and push the afternoons changes to the web. Time permitting Jeremy will introduce some extra credit projects to add to your app.
 .row
   .tencol.last
     #rubygroup
@@ -249,55 +246,55 @@
 
       %h3 Jason Arhart - Lead Organizer, Tech Support
       = image_tag("/assets/rubygroup/jason.jpg", class: "photo")
-      %p #{link_to("@jarhart", "http://twitter.com/jarhart")}
+      %p= link_to "@jarhart", "http://twitter.com/jarhart"
       %p Jason is a highly skilled developer who loves his craft. He's taking the lead in organizing the third Ruby Weekend. Jason is an engineer with #{ link_to('Originate', 'http://www.originate.com/')} and has been a part of the team who has won "Crowd Favorite" at the past two Startup Weekends in Las Vegas. Most recently his own creation,  #{ link_to('Honey-do Simple', 'http://www.honeydosimple.com/')}.
 
       %h3 Judd Lillestrand - Assistant Organizer, Tech Support
       = image_tag("/assets/rubygroup/judd.jpg", class: "photo")
-      %p #{link_to("@JuddLillestrand", "http://twitter.com/JuddLillestrand")}
+      %p= link_to("@JuddLillestrand", "http://twitter.com/JuddLillestrand")
       %p Judd led the charge of the first two Ruby Weekend. He'll be supporting Jason and helping him put on another successful event. Judd has been referred to as the 'benevolent dictator' of the Las Vegas Ruby Group. He's also the Founder of #{ link_to('ScripSmart', 'http://www.scripsmart.com/')} which has developed the rating systems for gift cards.
 
       %h3 Jeremy Woertink - Presenter
       = image_tag("/assets/rubygroup/jeremy.jpg", class: "photo")
-      %p #{link_to("@jeremywoertink", "http://twitter.com/jeremywoertink")}
+      %p= link_to("@jeremywoertink", "http://twitter.com/jeremywoertink")
       %p One of the most vocal and friendly members of the group, Jeremy is known for digging into cutting edge technology and pushing the limits. He's been building a 3D video game in Ruby using JRuby and loves sharing what he learns with others. Jeremy also has a great sense of humor which often seeps into his presentations for the group. If you recognize Jeremy it's because you've seen him interviewing people on his show #{link_to("loveadvice.tv", "http://loveadvice.tv")}.
 
       %h3 Bob Firestone - Presenter
       = image_tag("/assets/rubygroup/bob.jpg", class: "photo")
-      %p #{link_to("@bobfirestone", "http://twitter.com/bobfirestone")}
+      %p= link_to "@bobfirestone", "http://twitter.com/bobfirestone"
       %p Bob joined the Las Vegas Ruby Group knowing nothing about Ruby. Now he's building web applications, presenting to the group and teaching others what he's learned. He's not afraid to express his mind and can talk it up with everyone from grease monkeys to code monkeys.
 
       / %h3 Alex Peachey - Presenter
       / = image_tag("/assets/rubygroup/alex.png", class: "photo")
-      / %p #{link_to("@alex_peachey", "http://twitter.com/alex_peachey")}
+      / %p= link_to "@alex_peachey", "http://twitter.com/alex_peachey"
       / %p Alex is the new kid on the block when it comes to Ruby Weekend, but not when is comes to writing excellent code. This will be his first event, he's gives some of the best presentations for the Las Vegas Ruby Group and is the founder of #{link_to("Threadbias.com", "http://www.threadbias.com")} a leading online sewing community.
 
       %h3 Russ Smith - Designer, Designated Driver
       = image_tag("/assets/rubygroup/russ.jpg", class: "photo")
-      %p #{link_to("@cloudsplitter", "http://twitter.com/cloudsplitter")}
+      %p= link_to "@cloudsplitter", "http://twitter.com/cloudsplitter"
       %p Russ knows Rails inside-out. He loves to dive into new technology in order to get the job done right and can do it at an impressive speed. He's a rare breed: an awesome software developer and designer. Russ recently launched #{link_to("phone case of the month", "https://www.phonecaseofthemonth.com/")}, a subscription service for phone cases.
 
       %h3 Dylan Simpson - Tech Support
       = image_tag("/assets/rubygroup/dylan_simpson.png", class: "photo")
-      %p #{link_to("@dylansimpson", "http://twitter.com/dylansimpson")}
+      %p= link_to "@dylansimpson", "http://twitter.com/dylansimpson"
 
       %p Dylan attended the first Ruby Weekend, volunteered for the second and he's back for a third round of giving back. A rather talkative guy, he has an uncanny ability to remember facts and details. When Snopes.com needs to check a crazy fact, they call Dylan.
 
       %h3 Fred Guest - Tech Support
       = image_tag("/assets/rubygroup/fred_guest.jpg", class: "photo")
-      %p #{link_to("@fredguest", "http://twitter.com/fredguest")}
+      %p= link_to "@fredguest", "http://twitter.com/fredguest"
 
       %p Fred was also at the first Ruby Weekend and volenteered to help during the second. He's quickly been building his knowledge of the Rails framework. Fred is one of th most highly networked guys in #VegasTech: if you've been to a #VegasTech event, you've likely met Fred. Fred is passionate about crating value and shooting straight.
 
       %h3 Don Cramer - Tech Support
       = image_tag("/assets/rubygroup/don_cramer.jpg", class: "photo")
-      %p #{link_to("@scuderialv", "http://twitter.com/scuderialv")}
+      %p= link_to "@scuderialv", "http://twitter.com/scuderialv"
 
       %p Don was also at the first and second Ruby Weekend. He's the man behind #{link_to("Rocket36 Dev Studio", "http://www.rocket36.com/")}. If you need to increase your web presence, Don can help.
 
 
       / %h3 Mike Ball - Tech Support
-      / %p #{link_to("@mhball", "http://twitter.com/mhball")}
+      / %p= link_to "@mhball", "http://twitter.com/mhball"
 
       / %p A tech junkie, he's a .NET developer who comes to the Las Vegas Ruby Meetup to get his fix. Mike helped out at the first Ruby Weekend and he's ready to give back again. He's is a huge developer advocate: just ask him. Mike's our "Windows Guy".
 
