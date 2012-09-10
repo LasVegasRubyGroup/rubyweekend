@@ -18,7 +18,7 @@ class Registration < ActiveRecord::Base
 
   def self.full?
     #true
-    self.ruby_weekend_3.count >= 20
+    self.ruby_weekend_3.count >= 16
   end
 
   def self.hidden_full?
