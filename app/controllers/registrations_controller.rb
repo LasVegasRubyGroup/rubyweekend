@@ -1,4 +1,7 @@
 class RegistrationsController < ApplicationController
+
+  @@AMOUNT = 10000
+
   def new
     render("full") and return if Registration.full?
     @registration = Registration.new
@@ -41,19 +44,18 @@ private
         number: registration.card_number,
         exp_month: registration.card_expiry_month,
         exp_year: registration.card_expiry_year,
-        cvc: registration.card_cvc },
-      amount: 10000,
-      currency: "usd")
-  end
+        cvc: registration.card_cvc, 
+    })  
+    end
 
   def charge_token(token, registration)
     charge = Stripe::Charge.create(
-      amount: token.amount,
-      currency: token.currency,
+      amount: @@AMOUNT,
+      currency: "usd",
       card: token.id,
       description: "Registration charge for Ruby Weekend.")
 
-    registration.amount = token.amount
+    registration.amount = @@AMOUNT
     registration.token = charge.id
     registration.card_last_four = token.card.last4
     registration.card_type = token.card.type
