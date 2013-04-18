@@ -57,6 +57,9 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
+    figaro (0.6.3)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     haml (4.0.2)
       tilt
     haml-rails (0.4)
@@ -155,6 +158,7 @@ DEPENDENCIES
   coffee-rails
   exception_notification
   factory_girl_rails
+  figaro
   haml
   haml-rails
   jquery-rails

@@ -28,28 +28,32 @@
           %li= label_tag("Email")
           %li= f.text_field(:email)
 
-          %li= label_tag(:card_number, "Credit Card Number")
-          %li= f.text_field(:card_number, size: 30, maxlength: 20)
+  
 
-        %table
-          %tr
-            %td
-              %ol
-                %li= label_tag(:card_cvc, "CVV")
-                %li= f.text_field(:card_cvc, size: 3, maxlength: 4)
+          %script{:src => "https://checkout.stripe.com/v2/checkout.js"}
+          %button#customButton Purchase
+          :javascript
+            $('#customButton').click(function(){
+              var token = function(res){
+                var $input = $('<input type=hidden name=stripeToken />').val(res.id);
+                $('form').append($input).submit();
+              };
 
-            %td{ width: 15 }
+              StripeCheckout.open({
+                key:         "#{Rails.configuration.stripe[:publishable_key]}",
+                address:     true,
+                amount:      10000,
+                name:        $("#registration_name").val(),
+                email:       $("#registration_email").val(),
+                description: 'Ruby Weekend',
+                panelLabel:  'Checkout',
+                token:       token
+              });
 
-            %td
-              %ol
-                %li= label_tag("Expiration (MM/YYYY)")
-                %li
-                  = f.text_field(:card_expiry_month, size: 5, maxlength: 2)
-                  = f.text_field(:card_expiry_year, size: 5, maxlength: 4)
+              return false;
+            });
 
         %ol
-
-
           / %li
           / = label_tag(:agreed_to_refund_policy, "I agree to the
           /   = link_to Ruby Weekend refund policy, refund_policy_path}")
@@ -59,9 +63,10 @@
           / = f.check_box(:agreed_to_min_requirements)
           / = label_tag(:agreed_to_min_requirements, 'My laptop meets the minimum requirements')
 
-      .section-wrapper.controls
-        %ol
-          %li= submit_tag("Submit Registration")
+          / .section-wrapper.controls
+          /   %ol
+          /     %li= submit_tag("Submit Registration")
+          /       %script{"data-amount" => "10000", "data-description" => "Ruby Weekend Registration", "data-key" => Rails.configuration.stripe[:publishable_key], :src => "https://checkout.stripe.com/v2/checkout.js"}
 .row
   .sevencol.last
 

@@ -9,7 +9,7 @@ class RegistrationsController < ApplicationController
     @registration.rw_number = 3
     @registration.rw_date = Time.now
 
-    token = create_token(@registration)
+    token = params[:stripeToken]
 
     if @registration.save
       @registration = charge_token(token, @registration)
@@ -29,6 +29,7 @@ class RegistrationsController < ApplicationController
     render(:new)
   end
 
+
   def show
     @registration = Registration.find_by_token(params[:id])
   end
@@ -36,7 +37,7 @@ class RegistrationsController < ApplicationController
 private
 
   def create_token(registration)
-    Stripe::Token.create(
+    Stripe::Charge.create(
       card: {
         number: registration.card_number,
         exp_month: registration.card_expiry_month,

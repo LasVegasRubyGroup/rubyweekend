@@ -19,3 +19,6 @@
 
 /weekend/apps/address_book/addresses.json
 /weekend/apps/twitter/words.json
+
+# Ignore application configuration
+/config/application.yml
