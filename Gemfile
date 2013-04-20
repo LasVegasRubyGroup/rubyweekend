@@ -21,8 +21,12 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'sextant'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :production do
   gem 'pg'
 end
+
+gem 'figaro'
