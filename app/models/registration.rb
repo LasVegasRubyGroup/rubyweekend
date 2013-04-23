@@ -24,4 +24,9 @@ class Registration < ActiveRecord::Base
   def self.hidden_full?
     true
   end
+
+# We do not want to store Stripe Tokens because they are invalid after first use.
+  def token
+    "#{rw_number}-#{rw_date.to_i}"
+  end
 end
