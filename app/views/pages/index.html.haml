@@ -15,12 +15,12 @@
     - unless Registration.full?
       = link_to(@registration_url, class: "register") do
         %h1 Register Today
-        %p="Only #{20 - Registration.ruby_weekend_3.size} seats remain!"
+        %p="Only #{20 - Registration.ruby_weekend_4.size} seats remain!"
     - else
-      %h1 Happening September 8th and 9th
+      %h1 Happening May 17th, 18th and 19th
       / %p We're almost ready to take registrations.
       /%p For now, we've gone dark. We'll announce details of the next workshop in two ways:
-      %p Registration is now close. We'll do another weekend in 6-12 months.
+      %p Registration is now closed. We'll do another weekend in 6-12 months.
 
       = link_to(new_waitlist_path,  class: "register") do
         %h2 Sign up for email notifications
@@ -299,6 +299,11 @@
       = image_tag("/assets/rubygroup/gabe.png", class: "photo")
       %p= link_to "@GabeEvans", "http://twitter.com/GabeEvans"
       %p Gabriel's interest in programming started when he was in 2nd grade. His interest in wearing skinny jeans didn't develop until high school. He loves discussions about semantics, system administration, and usability. He's always more than happy to help if you ever have any questions or just need someone to talk out a problem with. Chances are you've already met him that one time at that thing.
+      %br
+      %h3 Nick Shook - Planning Assistance
+      = image_tag("/assets/rubygroup/nick.jpg", class: "photo")
+      %p= link_to "@shicholas", "http://twitter.com/shicholas"
+      %p Nick got into programming a couple years ago when he realized that being a lawyer wasn't for him. Thanks to the Ruby Group, Nick now works as a software developer for #{link_to("Veribuy", "http://beta.veribuy.com")}. 
       %br
       %h3 Alex Peachey - Planning Assistance
       = image_tag("/assets/rubygroup/alex.png", class: "photo")
