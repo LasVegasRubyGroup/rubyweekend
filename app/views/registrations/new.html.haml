@@ -46,19 +46,19 @@
                 %li
                   = f.text_field(:card_expiry_month, size: 5, maxlength: 2)
                   = f.text_field(:card_expiry_year, size: 5, maxlength: 4)
-        /%ol
-          / %li
-          / = label_tag(:agreed_to_refund_policy, "I agree to the
-          /   = link_to Ruby Weekend refund policy, refund_policy_path}")
-          / = f.check_box(:agreed_to_refund_policy)
+      .section-wrapper.controls
+        %ol
+          %li= submit_tag("Submit Registration")
+/%ol
+/ %li
+/ = label_tag(:agreed_to_refund_policy, "I agree to the
+/   = link_to Ruby Weekend refund policy, refund_policy_path}")
+/ = f.check_box(:agreed_to_refund_policy)
 
-          / %li
-          / = f.check_box(:agreed_to_min_requirements)
-          / = label_tag(:agreed_to_min_requirements, 'My laptop meets the minimum requirements')
+/ %li
+/ = f.check_box(:agreed_to_min_requirements)
+/ = label_tag(:agreed_to_min_requirements, 'My laptop meets the minimum requirements')
 
-      / .section-wrapper.controls
-      /   %ol
-      /     %li= submit_tag("Submit Registration")
 .row
   .sevencol.last
 

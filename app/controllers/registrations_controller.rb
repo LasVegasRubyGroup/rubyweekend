@@ -1,5 +1,6 @@
 class RegistrationsController < ApplicationController
 
+  # Amount is in cents
   @@AMOUNT = 10000
 
   def new
@@ -9,20 +10,21 @@ class RegistrationsController < ApplicationController
 
   def create
     @registration = Registration.new(params[:registration])
-    @registration.rw_number = 3
+    @registration.rw_number = 4
     @registration.rw_date = Time.now
 
-    token = params[:stripeToken]
-
     if @registration.save
-      @registration = charge_token(token, @registration)
-      @registration.save
+      token = create_token(@registration)
+      customer = create_customer(token, @registration)
+      create_charge(customer, @registration)
+
       RegistrationMailer.confirmation_email(@registration).deliver
 
-      case Rails.env
-      when "production" then redirect_to(registration_url(@registration.token, :host => "rubyweekend.heroku.com", :protocol => "http://"))
-      else redirect_to(registration_path(@registration.token))
-      end
+      # case Rails.env
+      # when "production" then redirect_to(registration_url(@registration.token, :host => "rubyweekend.heroku.com", :protocol => "http://"))
+      # else redirect_to(registration_path(@registration.token))
+      # end
+      render(:create)
     else
       render(:new)
     end
@@ -40,27 +42,27 @@ class RegistrationsController < ApplicationController
 private
 
   def create_token(registration)
-    Stripe::Charge.create(
+    Stripe::Token.create(
       card: {
         number: registration.card_number,
         exp_month: registration.card_expiry_month,
         exp_year: registration.card_expiry_year,
         cvc: registration.card_cvc, 
     })  
-    end
+  end
 
-  def charge_token(token, registration)
+  def create_charge(customer, registration)
     charge = Stripe::Charge.create(
       amount: @@AMOUNT,
       currency: "usd",
-      card: token.id,
-      description: "Registration charge for Ruby Weekend.")
+      description: "Registration charge for Ruby Weekend.",
+      customer: customer.id)
+  end
 
-    registration.amount = @@AMOUNT
-    registration.token = charge.id
-    registration.card_last_four = token.card.last4
-    registration.card_type = token.card.type
-
-    registration
+  def create_customer(token, registration)
+    customer = Stripe::Customer.create(
+        card: token.id,
+        email: registration.email
+      )
   end
 end
