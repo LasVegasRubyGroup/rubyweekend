@@ -11,18 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120409213731) do
+ActiveRecord::Schema.define(:version => 20130423041122) do
 
   create_table "registrations", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.integer  "amount"
-    t.string   "token"
     t.string   "card_last_four"
     t.string   "card_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "usrlib_membership"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.integer  "rw_number"
     t.datetime "rw_date"
     t.boolean  "agreed_to_refund_policy"
@@ -33,8 +31,8 @@ ActiveRecord::Schema.define(:version => 20120409213731) do
     t.string   "name"
     t.string   "email"
     t.string   "phone"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

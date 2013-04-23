@@ -14,14 +14,19 @@ class Registration < ActiveRecord::Base
 
   scope :ruby_weekend_2, :conditions => { :rw_number => [2] }
   scope :ruby_weekend_3, :conditions => { :rw_number => [3] }
-
+  scope :ruby_weekend_4, :conditions => { :rw_number => [4] }
 
   def self.full?
     #true
-    self.ruby_weekend_3.count >= 16
+    self.ruby_weekend_4.count >= 20
   end
 
   def self.hidden_full?
     true
+  end
+
+# We do not want to store Stripe Tokens because they are invalid after first use.
+  def token
+    "#{rw_number}-#{rw_date.to_i}"
   end
 end

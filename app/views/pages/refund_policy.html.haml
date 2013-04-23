@@ -2,8 +2,8 @@
 	.twocol
 		%h1 Refunds
 	.eightcol.last
-		%p The refund policy is simple: notify us via email at least two weeks before the workshop, we'll give you a refund. Send an email to #{mail_to "jason@rubyweekend.com", "jason@rubyweekend.com", :cc => "judd@rubyweekend.com", :subject => "rubyweekend cancellation" } as soon as you know you will not be able to attend.
-		%p If you have questions, #{ mail_to "jason@rubyweekend.com", "just ask Jason", :cc => "judd@rubyweekend.com", :subject => "rubyweekend questions" }.! :)
+		%p The refund policy is simple: notify us via email at least two weeks before the workshop, we'll give you a refund. Send an email to #{mail_to "jason@rubyweekend.com", "jason@rubyweekend.com", :cc => "dylan@rubyweekend.com", :subject => "rubyweekend cancellation" } as soon as you know you will not be able to attend.
+		%p If you have questions, #{ mail_to "jason@rubyweekend.com", "just ask Jason", :cc => "dylan@rubyweekend.com", :subject => "rubyweekend questions" }.! :)
 
 		- unless Registration.full?
 			= link_to(@registration_url, class: "register") do
