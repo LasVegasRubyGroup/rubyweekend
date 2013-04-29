@@ -2,13 +2,13 @@
 	.twocol
 		%h1 Refunds
 	.eightcol.last
-		%p The refund policy is simple: notify us via email at least two weeks before the workshop, we'll give you a refund. Send an email to #{mail_to "jason@rubyweekend.com", "jason@rubyweekend.com", :cc => "dylan@rubyweekend.com", :subject => "rubyweekend cancellation" } as soon as you know you will not be able to attend.
-		%p If you have questions, #{ mail_to "jason@rubyweekend.com", "just ask Jason", :cc => "dylan@rubyweekend.com", :subject => "rubyweekend questions" }.! :)
+		%p The refund policy is simple: notify us via email at least two weeks before the workshop, we'll give you a refund. Send an email to #{mail_to "dylan@rubyweekend.com", "dylan@rubyweekend.com", :cc => "dylan@rubyweekend.com", :subject => "rubyweekend cancellation" } as soon as you know you will not be able to attend.
+		%p If you have questions, #{ mail_to "dylan@rubyweekend.com", "just ask Dylan", :cc => "dylan@rubyweekend.com", :subject => "rubyweekend questions" }! <br> :)
 
 		- unless Registration.full?
 			= link_to(@registration_url, class: "register") do
 				%h1 Register Today
-				%p="Only #{20 - Registration.ruby_weekend_3.size} seats remain!"
+				%p="Only #{20 - Registration.ruby_weekend_4.size} seats remain!"
 		- else
 			= link_to(new_waitlist_path,  class: "register") do
 				%h1 We're almost ready. :)
