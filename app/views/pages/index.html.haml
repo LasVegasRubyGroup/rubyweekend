@@ -12,7 +12,7 @@
     %h1 Then Ruby Weekend Is For You!
     %p Ruby Weekend is an intensive two day workshop where we'll take 20 people who have no or very little software development experience and walk them through building a web application. At the end of the weekend you'll have the tools to take the next step towards building your idea.
 
-    - if Registration.full?
+    - unless Registration.full?
       = link_to(@registration_url, class: "register") do
         %h1 Register Today
         %p="Only #{20 - Registration.ruby_weekend_4.size} seats remain!"
@@ -22,7 +22,7 @@
       /%p For now, we've gone dark. We'll announce details of the next workshop in two ways:
       %p 
         %strong Registration is now full.
-      %p Please join our waitlist if there is enougth interest we'll expand the class size.
+      %p Please join our waitlist if there is enough interest we'll expand the class size.
 
       = link_to(new_waitlist_path,  class: "register") do
         %h2 Sign up for email notifications
