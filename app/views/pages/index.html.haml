@@ -15,7 +15,7 @@
     - unless Registration.full?
       = link_to(@registration_url, class: "register") do
         %h1 Register Today
-        %p="Only #{20 - Registration.ruby_weekend_4.size} seats remain!"
+        %p="Only #{22 - Registration.ruby_weekend_4.size} seats remain!"
     - else
       %h1 Happening May 17th, 18th and 19th
       / %p We're almost ready to take registrations.
