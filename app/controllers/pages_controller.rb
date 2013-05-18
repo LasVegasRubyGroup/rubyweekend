@@ -26,4 +26,13 @@ class PagesController < ApplicationController
   def glossary
   end
   
+  def challenge
+  end
+
+  def downloads
+  end
+
+  def vote
+  end
+
 end
